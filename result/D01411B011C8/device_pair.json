@@ -1,0 +1,19 @@
+[
+    {
+        "cmd": "switch-on",
+        "type": 0,
+        "description": "0",
+        "endpoint": 1,
+        "check-rules": [],
+        "actions": [
+            {
+                "cmd": "switch-on",
+                "mac-addr": "d0:14:11:b0:11:c8",
+                "endpoint": 2,
+                "level": 255,
+                "duration": 50,
+                "timeout-ms": 1000
+            }
+        ]
+    }
+]

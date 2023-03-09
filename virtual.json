@@ -1,0 +1,55 @@
+{
+    "d0:14:11:b0:11:c8": {
+        "type": "SCU",
+        "cmd": ["receive-switch-on", "receive-switch-off", "test"],
+        "Input_Channels": [1, 2, 3, 7, 8, 9],
+        "Output_Channels": [4, 5, 6, 10, 11, 12],
+        "channels": {
+            "1": ["switch-on"],
+            "2": ["switch-on"],
+            "3": ["switch-on"],
+            "4": ["switch-on", "switch-off", "test"],
+            "5": ["switch-on", "switch-off", "test"],
+            "6": ["switch-on", "switch-off", "test"],
+            "7": ["switch-on"],
+            "8": ["switch-on"],
+            "9": ["switch-on"],
+            "10": ["switch-on", "switch-off", "test"],
+            "11": ["switch-on", "switch-off", "test"],
+            "12": ["switch-on", "switch-off", "test"],
+            "13": ["switch-on"],
+            "14": ["switch-on"],
+            "15": ["switch-on"]
+        }
+    },
+    "d0:14:11:b0:11:c9": {
+        "type": "Dimmer",
+        "cmd": ["receive-switch-on", "receive-switch-off", "test"],
+        "channels": {
+            "1": ["receive-switch-on"],
+            "2": ["receive-switch-on"],
+            "3": ["receive-switch-on"],
+            "4": ["receive-switch-on", "receive-switch-off"],
+            "5": ["receive-switch-on", "receive-switch-off"],
+            "6": ["receive-switch-on", "receive-switch-off"],
+            "7": ["receive-switch-on"],
+            "8": ["receive-switch-on"]
+            
+        }
+    },
+    "d0:14:11:b0:11:ca": {
+        "type": "SmartSwitch",
+        "cmd": ["receive-switch-on", "receive-switch-off", "test"],
+        "channels": {
+            "1": ["switch-on"],
+            "2": ["switch-on"],
+            "3": ["switch-on"],
+            "4": ["switch-on", "switch-off"],
+            "5": ["switch-on", "switch-off"],
+            "6": ["switch-on", "switch-off"],
+            "7": ["switch-on"],
+            "8": ["switch-on"]
+            
+        }
+    }
+}

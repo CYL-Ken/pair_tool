@@ -1,0 +1,34 @@
+[
+    {
+        "cmd": "switch-on",
+        "type": 0,
+        "description": "Dimmer#1",
+        "endpoint": 1,
+        "check-rules": [],
+        "actions": [
+            {
+                "cmd": "switch-on",
+                "mac-addr": "d0:14:11:b0:02:5b",
+                "endpoint": 37,
+                "timeout-ms": 1000,
+                "delay-ms": 0
+            }
+        ]
+    },
+    {
+        "cmd": "switch-on",
+        "type": 0,
+        "description": "Dimmer#4",
+        "endpoint": 4,
+        "check-rules": [],
+        "actions": [
+            {
+                "cmd": "switch-on",
+                "mac-addr": "d0:14:11:b0:02:5b",
+                "endpoint": 38,
+                "timeout-ms": 1000,
+                "delay-ms": 0
+            }
+        ]
+    }
+]
