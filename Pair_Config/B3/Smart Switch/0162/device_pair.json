@@ -1,0 +1,74 @@
+[
+    {
+        "cmd": "receive-switch-on",
+        "type": 0,
+        "description": "SS8#1",
+        "endpoint": 25,
+        "check-rules": [],
+        "actions": [
+            {
+                "cmd": "level-move-to",
+                "mac-addr": "d0:14:11:b0:12:cb",
+                "endpoint": 4,
+                "level": 255,
+                "duration": 50,
+                "timeout-ms": 1000,
+                "delay-ms": 0
+            }
+        ]
+    },
+    {
+        "cmd": "switch-on",
+        "type": 0,
+        "description": "SS8#1",
+        "endpoint": 25,
+        "check-rules": [],
+        "actions": [
+            {
+                "cmd": "level-move-to",
+                "mac-addr": "d0:14:11:b0:12:cb",
+                "endpoint": 4,
+                "level": 255,
+                "duration": 50,
+                "timeout-ms": 1000,
+                "delay-ms": 0
+            }
+        ]
+    },
+    {
+        "cmd": "receive-switch-off",
+        "type": 0,
+        "description": "SS8#1",
+        "endpoint": 25,
+        "check-rules": [],
+        "actions": [
+            {
+                "cmd": "level-move-to",
+                "mac-addr": "d0:14:11:b0:12:cb",
+                "endpoint": 4,
+                "level": 0,
+                "duration": 50,
+                "timeout-ms": 1000,
+                "delay-ms": 0
+            }
+        ]
+    },
+    {
+        "cmd": "switch-off",
+        "type": 0,
+        "description": "SS8#1",
+        "endpoint": 25,
+        "check-rules": [],
+        "actions": [
+            {
+                "cmd": "level-move-to",
+                "mac-addr": "d0:14:11:b0:12:cb",
+                "endpoint": 4,
+                "level": 0,
+                "duration": 50,
+                "timeout-ms": 1000,
+                "delay-ms": 0
+            }
+        ]
+    }
+]

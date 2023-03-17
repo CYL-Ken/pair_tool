@@ -1,0 +1,82 @@
+[
+	{
+		"cmd": "receive-switch-on",
+		"type": 0,
+		"description": "Mode 1",
+		"endpoint": 25,
+		"check-rules": [],
+		"actions": [
+			{
+				"cmd": "switch-on",
+				"mac-addr": "d0:14:11:b0:12:a0",
+				"endpoint": 4,
+				"timeout-ms": 1000,
+				"delay-ms": 100
+			}
+		]
+	},
+	{
+		"cmd": "receive-switch-on",
+		"type": 0,
+		"description": "Mode 1",
+		"endpoint": 26,
+		"check-rules": [],
+		"actions": [
+			{
+				"cmd": "switch-on",
+				"mac-addr": "d0:14:11:b0:12:a0",
+				"endpoint": 1,
+				"timeout-ms": 1000,
+				"delay-ms": 100
+			}
+		]
+	},	
+	{
+		"cmd": "receive-switch-on",
+		"type": 0,
+		"description": "Mode 1",
+		"endpoint": 27,
+		"check-rules": [],
+		"actions": [
+			{
+				"cmd": "switch-on",
+				"mac-addr": "d0:14:11:b0:12:c2",
+				"endpoint": 1,
+				"timeout-ms": 1000,
+				"delay-ms": 100
+			}
+		]
+	},
+	{
+		"cmd": "receive-switch-on",
+		"type": 0,
+		"description": "Mode 1",
+		"endpoint": 32,
+		"check-rules": [],
+		"actions": [
+			{
+				"cmd": "switch-on",
+				"mac-addr": "d0:14:11:b0:12:a0",
+				"endpoint": 3,
+				"timeout-ms": 1000,
+				"delay-ms": 100
+			}
+		]
+	},	
+    {
+		"cmd": "receive-switch-on",
+		"type": 0,
+		"description": "Mode 1",
+		"endpoint": 33,
+		"check-rules": [],
+		"actions": [
+			{
+				"cmd": "switch-on",
+				"mac-addr": "d0:14:11:b0:12:c2",
+				"endpoint": 2,
+				"timeout-ms": 1000,
+				"delay-ms": 100
+			}
+		]
+	}
+]

@@ -1,0 +1,18 @@
+[
+    {
+        "cmd": "switch-on",
+        "type": 0,
+        "description": "Dimmer#2",
+        "endpoint": 2,
+        "check-rules": [],
+        "actions": [
+            {
+                "cmd": "level-move-to",
+                "mac-addr": "d0:14:11:b0:01:1a",
+                "endpoint": 38,
+                "timeout-ms": 1000,
+                "delay-ms": 0
+            }
+        ]
+    }
+]
