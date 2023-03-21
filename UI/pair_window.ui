@@ -16,6 +16,15 @@
   <property name="styleSheet">
    <string notr="true">#PairWindow {
 	background-color: #F9F7F7;
+}
+
+QLabel#source_channel {
+	border: 1px solid #3F72AF;
+	border-radius: 5px;
+}
+QLabel#target_channel {
+	border: 1px solid #3F72AF;
+	border-radius: 5px;
 }</string>
   </property>
   <widget class="QPushButton" name="confirm">
@@ -37,32 +46,21 @@
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">QPushButton#confirm {
-        background-color: #007bff;
-        color: #ffffff;
-        border-radius: 5px;
-        border: none;
-    }
-    
-    QPushButton#confirm:hover {
-        background-color: #0056b3;
-        color: #ffffff;
-    }
-    
-    QPushButton#confirm:pressed {
-        background-color: #007bff;
-        color: #ffffff;
-        border: 2px solid #0056b3;
-    }
-    
-    QPushButton#confirm:focus {
-        border: none;
-        outline: none;
-    }
-    
-    QPushButton#confirm:focus:hover {
-        background-color: #0056b3;
-    }</string>
+    <string notr="true">
+QPushButton#confirm {
+    background-color: #3F72AF;
+    color: #F9F7F7;
+    border-radius: 5px;
+    border: none;
+}
+
+QPushButton#confirm:hover {
+    background-color: #F9F7F7;
+    color: #3F72AF;
+    border-radius: 5px;
+    border: 2px solid #3F72AF;
+}
+</string>
    </property>
    <property name="text">
     <string>完成</string>
@@ -92,18 +90,13 @@
     <property name="font">
      <font>
       <family>Consolas</family>
-      <pointsize>-1</pointsize>
+      <pointsize>25</pointsize>
       <weight>75</weight>
       <bold>true</bold>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">border: 1px solid black;
-border-radius: 15px;
-padding: 5px 1px;
-font-size: 35px;
-font-weight: bold;
-font-family: Consolas;</string>
+     <string notr="true"/>
     </property>
     <property name="text">
      <string>5</string>
@@ -146,6 +139,9 @@ font-family: Consolas;</string>
      <height>90</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
    <property name="title">
     <string/>
    </property>
@@ -161,18 +157,13 @@ font-family: Consolas;</string>
     <property name="font">
      <font>
       <family>Consolas</family>
-      <pointsize>-1</pointsize>
+      <pointsize>25</pointsize>
       <weight>75</weight>
       <bold>true</bold>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">border: 1px solid black;
-border-radius: 15px;
-padding: 5px 1px;
-font-size: 35px;
-font-weight: bold;
-font-family: Consolas;</string>
+     <string notr="true"/>
     </property>
     <property name="text">
      <string>2</string>
@@ -231,10 +222,16 @@ subcontrol-position: top center;
 #cmd_group{
 border:0;
 }
-</string>
+QWidget#container {
+    background-color: #DBE2EF;
+}
+QScrollArea {
+    border: 1px solid #DBE2EF;
+    background-color: #DBE2EF;
+}</string>
    </property>
    <property name="title">
-    <string>Added Commands</string>
+    <string>已加入的配對</string>
    </property>
   </widget>
   <widget class="QGroupBox" name="input_group">
@@ -249,7 +246,7 @@ border:0;
    <property name="styleSheet">
     <string notr="true">#input_group {
 	border: 1px solid #3F72AF;
-	border-radius: 15px;
+	border-radius: 10px;
 }</string>
    </property>
    <property name="title">
@@ -259,9 +256,9 @@ border:0;
     <property name="geometry">
      <rect>
       <x>110</x>
-      <y>200</y>
+      <y>190</y>
       <width>281</width>
-      <height>31</height>
+      <height>41</height>
      </rect>
     </property>
     <property name="font">
@@ -274,32 +271,21 @@ border:0;
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">QPushButton#output {
-        background-color: #007bff;
-        color: #ffffff;
-        border-radius: 5px;
-        border: none;
-    }
-    
-    QPushButton#output:hover {
-        background-color: #0056b3;
-        color: #ffffff;
-    }
-    
-    QPushButton#output:pressed {
-        background-color: #007bff;
-        color: #ffffff;
-        border: 2px solid #0056b3;
-    }
-    
-    QPushButton#output:focus {
-        border: none;
-        outline: none;
-    }
-    
-    QPushButton#output:focus:hover {
-        background-color: #0056b3;
-    }</string>
+     <string notr="true">
+QPushButton#add {
+    background-color: #3F72AF;
+    color: #F9F7F7;
+    border-radius: 5px;
+    border: none;
+}
+
+QPushButton#add:hover {
+    background-color: #F9F7F7;
+    color: #3F72AF;
+    border-radius: 5px;
+    border: 2px solid #3F72AF;
+}
+</string>
     </property>
     <property name="text">
      <string>新增至列表</string>

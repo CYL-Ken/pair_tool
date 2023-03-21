@@ -51,5 +51,20 @@
             "8": ["switch-on"]
             
         }
+    },
+    "d0:14:11:b0:11:dd": {
+        "type": "SmartSwitch",
+        "cmd": ["receive-switch-on", "receive-switch-off", "test"],
+        "channels": {
+            "1": ["switch-on"],
+            "2": ["switch-on"],
+            "3": ["switch-on"],
+            "4": ["switch-on", "switch-off"],
+            "5": ["switch-on", "switch-off"],
+            "6": ["switch-on", "switch-off"],
+            "7": ["switch-on"],
+            "8": ["switch-on"]
+            
+        }
     }
 }

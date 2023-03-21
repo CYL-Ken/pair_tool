@@ -13,6 +13,49 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget {
+	background-color: #F9F7F7;
+}
+
+QComboBox {
+    border: 2px solid #DBE2EF;
+    border-radius: 5px;
+    background-color: #F9F7F7;
+
+	font-family: Lucida Console;
+    padding: 5px;
+}
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 30px;
+    border-left-width: 0px;
+}
+QComboBox::down-arrow {
+    image: url(&quot;resource/arrow_down.png&quot;);
+	margin-right: 15px;
+    width: 20px;
+    height: 20px;
+}
+QComboBox QAbstractItemView {
+    border: 1.5px solid #3F72AF;
+    background-color: #F9F7F7;
+    font-size: 25px;
+    padding: 5px;
+    selection-background-color: #3F72AF;
+}
+
+QGroupBox#device_button_group {
+	border: 2px solid #DBE2EF;
+	border-radius: 5px;
+}
+QGroupBox#target_button_group {
+	border: 2px solid #DBE2EF;
+	border-radius: 5px;
+}
+</string>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QPushButton" name="output">
     <property name="geometry">
@@ -33,32 +76,21 @@
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">QPushButton#output {
-        background-color: #007bff;
-        color: #ffffff;
-        border-radius: 5px;
-        border: none;
-    }
-    
-    QPushButton#output:hover {
-        background-color: #0056b3;
-        color: #ffffff;
-    }
-    
-    QPushButton#output:pressed {
-        background-color: #007bff;
-        color: #ffffff;
-        border: 2px solid #0056b3;
-    }
-    
-    QPushButton#output:focus {
-        border: none;
-        outline: none;
-    }
-    
-    QPushButton#output:focus:hover {
-        background-color: #0056b3;
-    }</string>
+     <string notr="true">
+QPushButton#output {
+    background-color: #3F72AF;
+    color: #F9F7F7;
+    border-radius: 5px;
+    border: none;
+}
+
+QPushButton#output:hover {
+    background-color: #F9F7F7;
+    color: #3F72AF;
+    border-radius: 5px;
+    border: 2px solid #3F72AF;
+}
+</string>
     </property>
     <property name="text">
      <string>輸出配對表</string>
@@ -80,7 +112,7 @@
     </property>
     <property name="styleSheet">
      <string notr="true">QGroupBox#device_group {
-	border: 2px solid #4A4A4A;
+	border: 2px solid #112D4E;
 	border-radius: 15px;
 }</string>
     </property>
@@ -93,9 +125,9 @@
     <widget class="QLabel" name="device_title">
      <property name="geometry">
       <rect>
-       <x>20</x>
+       <x>140</x>
        <y>20</y>
-       <width>840</width>
+       <width>720</width>
        <height>30</height>
       </rect>
      </property>
@@ -109,7 +141,7 @@
       <cursorShape>ArrowCursor</cursorShape>
      </property>
      <property name="text">
-      <string>來源裝置:</string>
+      <string/>
      </property>
     </widget>
     <widget class="QComboBox" name="comboBox">
@@ -124,7 +156,7 @@
      <property name="font">
       <font>
        <family>Lucida Console</family>
-       <pointsize>20</pointsize>
+       <pointsize>15</pointsize>
       </font>
      </property>
     </widget>
@@ -144,6 +176,31 @@
       <string/>
      </property>
     </widget>
+    <widget class="QLabel" name="device_title_2">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>20</y>
+       <width>121</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>微軟正黑體</family>
+       <pointsize>20</pointsize>
+      </font>
+     </property>
+     <property name="cursor">
+      <cursorShape>ArrowCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: #112D4E;</string>
+     </property>
+     <property name="text">
+      <string>來源裝置:</string>
+     </property>
+    </widget>
    </widget>
    <widget class="QGroupBox" name="target_group">
     <property name="geometry">
@@ -161,7 +218,7 @@
     </property>
     <property name="styleSheet">
      <string notr="true">QGroupBox#target_group {
-	border: 2px solid #4A4A4A;
+	border: 2px solid #112D4E;
 	border-radius: 15px;
 }</string>
     </property>
@@ -174,9 +231,9 @@
     <widget class="QLabel" name="target_title">
      <property name="geometry">
       <rect>
-       <x>20</x>
+       <x>140</x>
        <y>20</y>
-       <width>840</width>
+       <width>720</width>
        <height>30</height>
       </rect>
      </property>
@@ -190,7 +247,7 @@
       <cursorShape>ArrowCursor</cursorShape>
      </property>
      <property name="text">
-      <string>目標裝置:</string>
+      <string/>
      </property>
     </widget>
     <widget class="QComboBox" name="comboBox_2">
@@ -205,7 +262,7 @@
      <property name="font">
       <font>
        <family>Lucida Console</family>
-       <pointsize>20</pointsize>
+       <pointsize>15</pointsize>
       </font>
      </property>
     </widget>
@@ -223,6 +280,31 @@
      </property>
      <property name="title">
       <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="target_title_2">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>20</y>
+       <width>121</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>微軟正黑體</family>
+       <pointsize>20</pointsize>
+      </font>
+     </property>
+     <property name="cursor">
+      <cursorShape>ArrowCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: #112D4E;</string>
+     </property>
+     <property name="text">
+      <string>目標裝置:</string>
      </property>
     </widget>
    </widget>
@@ -245,10 +327,15 @@
      <property name="geometry">
       <rect>
        <x>30</x>
-       <y>21</y>
+       <y>20</y>
        <width>61</width>
        <height>15</height>
       </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Verdana</family>
+      </font>
      </property>
      <property name="text">
       <string>Input</string>
@@ -258,10 +345,15 @@
      <property name="geometry">
       <rect>
        <x>30</x>
-       <y>37</y>
+       <y>40</y>
        <width>61</width>
        <height>15</height>
       </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Verdana</family>
+      </font>
      </property>
      <property name="text">
       <string>Output</string>
@@ -271,10 +363,15 @@
      <property name="geometry">
       <rect>
        <x>30</x>
-       <y>5</y>
+       <y>0</y>
        <width>61</width>
        <height>15</height>
       </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Verdana</family>
+      </font>
      </property>
      <property name="text">
       <string>Normal</string>
@@ -284,14 +381,14 @@
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>5</y>
+       <y>0</y>
        <width>15</width>
        <height>15</height>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">border: 0.5px solid black;
-background-color: #ECF2FF;</string>
+      <string notr="true">border: 0.5px solid #3F72AF;
+background-color: #CADEFC;</string>
      </property>
      <property name="text">
       <string/>
@@ -301,14 +398,14 @@ background-color: #ECF2FF;</string>
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>21</y>
+       <y>20</y>
        <width>15</width>
        <height>15</height>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">border: 0.5px solid black;
-background-color: #D7E9B9;</string>
+      <string notr="true">border: 0.5px solid #3F72AF;
+background-color: #D3E0DC;</string>
      </property>
      <property name="text">
       <string/>
@@ -318,19 +415,38 @@ background-color: #D7E9B9;</string>
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>37</y>
+       <y>40</y>
        <width>15</width>
        <height>15</height>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">border: 0.5px solid black;
-background-color: #FFC6D3;</string>
+      <string notr="true">border: 0.5px solid #3F72AF;
+background-color: #E9D5DA;</string>
      </property>
      <property name="text">
       <string/>
      </property>
     </widget>
+   </widget>
+   <widget class="QPushButton" name="refresh_button">
+    <property name="geometry">
+     <rect>
+      <x>1180</x>
+      <y>660</y>
+      <width>50</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	image: url(&quot;resource/refresh.png&quot;);
+	border:none;
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">

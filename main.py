@@ -1,15 +1,17 @@
-import json
+import json, time
 from PyQt5 import QtWidgets, QtGui, QtCore
 from PyQt5.QtWidgets import QLabel, QPushButton, QGroupBox, QWidget, QGridLayout, QVBoxLayout, QScrollArea, QHBoxLayout
 
 from layout.main_ui import Ui_MainWindow
 from layout.pairwindow_ui import Ui_PairWindow
 from pair_dataset import PairDataset
+from network_scanner import NetworkScanner
+
 
 """
- - MainWindow: The homepage of this application
- - PairWindow: For user type command detail
- - PopUpWindow: For displaying any message
+    - MainWindow: The homepage of this application
+    - PairWindow: For user type command detail
+    - PopUpWindow: For displaying any message
 """
 
 class MainWindow(QtWidgets.QMainWindow):
@@ -21,14 +23,16 @@ class MainWindow(QtWidgets.QMainWindow):
         self.pop_up_window = PopUpWindow()
         self.pair_window = PairWindow()
         
+        self.network_scanner = NetworkScanner()
+        
         # Different device's button layout
         with open("configs/layout_config.json") as f:
-            self.layout_congfig = json.load(f)
+            self.layout_config = json.load(f)
 
-        self.devices_layout_config = self.layout_congfig["Device Layout"]
+        self.devices_layout_config = self.layout_config["Device Layout"]
         
-        self.device_buttom = dict()
-        self.target_buttom = dict()
+        self.device_button = dict()
+        self.target_button = dict()
 
         # For record new pair information
         self.temp_pair_table = [0, 0]
@@ -37,67 +41,105 @@ class MainWindow(QtWidgets.QMainWindow):
         # Initial UI
         self.ui.setupUi(self)
         self.setWindowTitle("配對工具")
-        self.get_device_and_info()
         self.setup_control()
-    
-    
+
+
     def setup_control(self):
         self.ui.output.clicked.connect(self.output_to_json)
+        self.ui.refresh_button.clicked.connect(self.update_connected_devices)
         self.ui.comboBox.currentTextChanged.connect(self.update_device)
         self.ui.comboBox_2.currentTextChanged.connect(self.update_target)
 
         # First Update btns in two group 
-        self.update_device()
-        self.update_target()
+        self.launch = True
+        self.update_connected_devices()
         
-    
+    def update_connected_devices(self):
+        ret = self.get_device_and_info()
+        if ret:
+            self.update_device()
+            self.update_target()
+        else:
+            if self.ui.device_button_group.layout():
+                QWidget().setLayout(self.ui.device_button_group.layout())
+            if self.ui.target_button_group.layout():
+                QWidget().setLayout(self.ui.target_button_group.layout())
+            self.ui.device_title.setText("")
+            self.ui.target_title.setText("")
+        
+        if self.launch is True:
+            self.launch = False
+        else:
+            self.pop_up_window.show_update_message()
+
+
     def get_device_and_info(self):
         self.device_list = []
+        self.default_data = {}
+        self.iot_devices = {}
+        
+        self.ui.comboBox.blockSignals(True)
+        self.ui.comboBox.clear()
+        self.ui.comboBox_2.blockSignals(True)
+        self.ui.comboBox_2.clear()
+        
+        self.iot_devices = self.network_scanner.get_iot_devices()
+        self.device_list = self.iot_devices.values()
+        
         with open("configs/virtual.json") as f:
-            self.default_data = json.load(f)
-            self.device_list = self.default_data.keys()
+            default_data = json.load(f)
+            self.default_data = default_data
+            # self.device_list = default_data.keys()
+            f.close()
+        
+        if len(self.device_list) > 0:
+            self.ui.comboBox.addItems(self.device_list)
+            self.ui.comboBox_2.addItems(self.device_list)
+        
+            self.ui.comboBox.blockSignals(False)
+            self.ui.comboBox_2.blockSignals(False)
+            
+            return True
+        else:
+            return False
 
-        self.ui.comboBox.addItems(self.device_list)
-        self.ui.comboBox_2.addItems(self.device_list)
-
-    
     def update_device(self):
         self.device_mac = self.ui.comboBox.currentText()
         self.device_channels = self.default_data[self.device_mac]["channels"]
-        self.device_buttom = dict()
-        self.create_btns(object=self.device_buttom, 
-                         click_func=self.click_device, 
-                         device_type=self.default_data[self.device_mac]["type"], 
-                         layout_group=self.ui.device_button_group,
-                         mac=self.device_mac,
-                         space="device")
+        self.device_button = dict()
+        self.create_btns(object=self.device_button, 
+                        click_func=self.click_device, 
+                        device_type=self.default_data[self.device_mac]["type"], 
+                        layout_group=self.ui.device_button_group, 
+                        mac=self.device_mac, 
+                        space="device")
         
         device_type = self.default_data[self.device_mac]["type"]
-        self.ui.device_title.setText(f"來源裝置 {device_type} - {self.device_mac.upper()}")
+        self.ui.device_title.setText(f"{device_type} - {self.device_mac.upper()}")
         
 
     def update_target(self):
         self.target_mac = self.ui.comboBox_2.currentText()
         self.target_channels = self.default_data[self.target_mac]["channels"]
-        self.target_buttom = dict()
-        self.create_btns(object=self.target_buttom, 
-                         click_func=self.click_target, 
-                         device_type=self.default_data[self.target_mac]["type"], 
-                         layout_group=self.ui.target_button_group,
-                         mac=self.target_mac,
-                         space="target")
+        self.target_button = dict()
+        self.create_btns(object=self.target_button, 
+                        click_func=self.click_target, 
+                        device_type=self.default_data[self.target_mac]["type"], 
+                        layout_group=self.ui.target_button_group,
+                        mac=self.target_mac,
+                        space="target")
 
         device_type = self.default_data[self.target_mac]["type"]
-        self.ui.target_title.setText(f"目標裝置 {device_type} - {self.target_mac.upper()}")
+        self.ui.target_title.setText(f"{device_type} - {self.target_mac.upper()}")
         
 
     def click_device(self):
         sender = self.sender()
         print("Device click: ", sender.text())
         self.temp_pair_table[0] = sender.text()
-        for i in self.device_buttom.keys():
-            if self.device_buttom[i].text() != sender.text():
-                self.device_buttom[i].set_btn_status(False)
+        for i in self.device_button.keys():
+            if self.device_button[i].text() != sender.text():
+                self.device_button[i].set_btn_status(False)
 
 
     def click_target(self):
@@ -109,9 +151,9 @@ class MainWindow(QtWidgets.QMainWindow):
 
         try:
             self.show_pair_window(self.temp_pair_table)
-            for i in self.target_buttom.keys():
-                if self.target_buttom[i].text() != sender.text():
-                    self.target_buttom[i].set_btn_status(False)
+            for i in self.target_button.keys():
+                if self.target_button[i].text() != sender.text():
+                    self.target_button[i].set_btn_status(False)
         except Exception as e:
             self.release_btns()
             self.pop_up_window.show_warning_message()
@@ -170,11 +212,11 @@ class MainWindow(QtWidgets.QMainWindow):
             if space == "device":
                 if target_mac != self.target_mac:
                     continue
-                self.target_buttom[target_channel].show_pair_connection(is_pair=is_pair)
+                self.target_button[target_channel].show_pair_connection(is_pair=is_pair)
             else:
                 if target_mac != self.device_mac:
                     continue
-                self.device_buttom[target_channel].show_pair_connection(is_pair=is_pair)
+                self.device_button[target_channel].show_pair_connection(is_pair=is_pair)
 
 
     def show_pair_window(self, temp_pair_table):
@@ -187,10 +229,10 @@ class MainWindow(QtWidgets.QMainWindow):
 
 
     def release_btns(self):
-        for i in self.device_buttom.keys():
-            self.device_buttom[i].set_btn_status(True)
-        for i in self.target_buttom.keys():
-            self.target_buttom[i].set_btn_status(True)
+        for i in self.device_button.keys():
+            self.device_button[i].set_btn_status(True)
+        for i in self.target_button.keys():
+            self.target_button[i].set_btn_status(True)
 
     
     def output_to_json(self):
@@ -199,13 +241,14 @@ class MainWindow(QtWidgets.QMainWindow):
             self.pop_up_window.show_output_json_message(True)
         else:
             self.pop_up_window.show_output_json_message(False, msg)
-       
+
 
 class PairWindow(QtWidgets.QWidget):
     def __init__(self):
         super(PairWindow, self).__init__()
         self.ui = Ui_PairWindow()
         self.ui.setupUi(self)
+        self.setWindowTitle("新增配對內容")
         
 
     def show_window(self, source_mac, target_mac, source_endpoint, target_endpoint, dataset):
@@ -231,6 +274,7 @@ class PairWindow(QtWidgets.QWidget):
 
         h_layout = QHBoxLayout()
         widget = QWidget(self.ui.cmd_group)
+        widget.setObjectName("container")
         
         layout = QVBoxLayout()
         scroll_area = QScrollArea()
@@ -258,16 +302,10 @@ class PairWindow(QtWidgets.QWidget):
 
         widget.setLayout(layout)
         scroll_area.setWidget(widget)
-        scroll_area.setStyleSheet('''
-            QScrollArea {
-                border: 1px solid #2D2727;
-                background-color: #EEEEEE;
-            }
-        ''')
+        
         h_layout.addWidget(scroll_area)
         self.ui.cmd_group.setLayout(h_layout)
 
-        
 
     def init_cmd(self, source_command_list=[], target_command_list=[]):
         font = QtGui.QFont()
@@ -358,14 +396,20 @@ class PopUpWindow(QtWidgets.QWidget):
         self.button.setStyleSheet("font-size:16px")
         self.button.setGeometry(QtCore.QRect(100, 200, 120, 30))
         self.button.clicked.connect(self.close)
+        
+        self.setWindowTitle("提示訊息")
 
     def show_warning_message(self, message=""):
-        self.msg.setText("沒有Command!!!")
+        self.msg.setText("沒有Command.................")
+        self.show()
+        
+    def show_update_message(self, message=""):
+        self.msg.setText("設備列表更新完成!")
         self.show()
 
     def show_output_json_message(self, result, message=""):
         if result:
-            self.msg.setText("輸出JSON檔成功!!!")
+            self.msg.setText("輸出JSON檔成功!")
         else:
             self.msg.setText(f"輸出JSON檔失敗: {message}")
 
@@ -390,19 +434,19 @@ class CustomButton(QPushButton):
 
     def setup_button(self):
         # Normal Channel
-        self.bg_color = "ECF2FF"
+        self.bg_color = "CADEFC"
         self.hover_color = "FFFFFF"
         self.hover_bg_color = "3E54AC"
 
         # Input/Output Channel
         if self.button_type == "Input":
-            self.bg_color = "D7E9B9"
+            self.bg_color = "D3E0DC"
         elif self.button_type == "Output":
-            self.bg_color = "FFC6D3"
+            self.bg_color = "E9D5DA"
 
         self.setStyleSheet(f'''
             QPushButton {{
-                border: 1.5px solid #332C39;
+                border: 1px solid #3F72AF;
                 border-radius: 7px;
                 padding: 5px 1px;
                 font-size: 20px;

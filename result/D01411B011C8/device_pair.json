@@ -3,34 +3,14 @@
         "cmd": "switch-on",
         "type": 0,
         "description": "0",
-        "endpoint": 1,
+        "endpoint": 9,
         "check-rules": [],
         "actions": [
             {
                 "cmd": "switch-on",
-                "mac-addr": "d0:14:11:b0:11:c8",
+                "mac-addr": "d0:14:11:b0:11:xd",
                 "endpoint": 1,
-                "level": 123
-            },
-            {
-                "cmd": "switch-on",
-                "mac-addr": "d0:14:11:b0:11:c8",
-                "endpoint": 1,
-                "duration": 123
-            },
-            {
-                "cmd": "switch-on",
-                "mac-addr": "d0:14:11:b0:11:c8",
-                "endpoint": 2,
-                "level": 235,
-                "duration": 235
-            },
-            {
-                "cmd": "switch-on",
-                "mac-addr": "d0:14:11:b0:11:c8",
-                "endpoint": 2,
-                "timeout-ms": 32,
-                "delay-ms": 3
+                "level": 3
             }
         ]
     },
@@ -38,22 +18,15 @@
         "cmd": "switch-on",
         "type": 0,
         "description": "0",
-        "endpoint": 2,
+        "endpoint": 7,
         "check-rules": [],
         "actions": [
             {
                 "cmd": "switch-on",
-                "mac-addr": "d0:14:11:b0:11:c8",
+                "mac-addr": "d0:14:11:b0:11:ca",
                 "endpoint": 1,
-                "level": 23,
-                "duration": 5
-            },
-            {
-                "cmd": "switch-on",
-                "mac-addr": "d0:14:11:b0:11:c8",
-                "endpoint": 1,
-                "level": 2,
-                "timeout-ms": 2
+                "level": 332,
+                "duration": 3
             }
         ]
     }

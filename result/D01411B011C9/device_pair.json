@@ -1,0 +1,34 @@
+[
+    {
+        "cmd": "receive-switch-on",
+        "type": 0,
+        "description": "0",
+        "endpoint": 1,
+        "check-rules": [],
+        "actions": [
+            {
+                "cmd": "receive-switch-on",
+                "mac-addr": "d0:14:11:b0:11:c9",
+                "endpoint": 1,
+                "level": 235235,
+                "duration": 325
+            }
+        ]
+    },
+    {
+        "cmd": "receive-switch-on",
+        "type": 0,
+        "description": "0",
+        "endpoint": 2,
+        "check-rules": [],
+        "actions": [
+            {
+                "cmd": "receive-switch-on",
+                "mac-addr": "d0:14:11:b0:11:c9",
+                "endpoint": 1,
+                "level": 3456,
+                "duration": 45
+            }
+        ]
+    }
+]

@@ -1,5 +1,5 @@
 {
-    "d0:14:11:b0:11:c8": {
+    "d0:14:11:b0:0f:75": {
         "type": "SCU",
         "cmd": ["receive-switch-on", "receive-switch-off", "test"],
         "Input_Channels": [1, 2, 3, 7, 8, 9],
@@ -22,7 +22,7 @@
             "15": ["switch-on"]
         }
     },
-    "d0:14:11:b0:11:c9": {
+    "d0:14:11:b0:0f:72": {
         "type": "Dimmer",
         "cmd": ["receive-switch-on", "receive-switch-off", "test"],
         "channels": {
@@ -38,6 +38,21 @@
         }
     },
     "d0:14:11:b0:11:ca": {
+        "type": "SmartSwitch",
+        "cmd": ["receive-switch-on", "receive-switch-off", "test"],
+        "channels": {
+            "1": ["switch-on"],
+            "2": ["switch-on"],
+            "3": ["switch-on"],
+            "4": ["switch-on", "switch-off"],
+            "5": ["switch-on", "switch-off"],
+            "6": ["switch-on", "switch-off"],
+            "7": ["switch-on"],
+            "8": ["switch-on"]
+            
+        }
+    },
+    "d0:14:11:b0:11:xd": {
         "type": "SmartSwitch",
         "cmd": ["receive-switch-on", "receive-switch-off", "test"],
         "channels": {

@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file '.\main.ui'
+# Form implementation generated from reading ui file '.\UI\main.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.7
 #
@@ -15,6 +15,47 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(1280, 750)
+        MainWindow.setStyleSheet("QWidget {\n"
+"    background-color: #F9F7F7;\n"
+"}\n"
+"\n"
+"QComboBox {\n"
+"    border: 2px solid #DBE2EF;\n"
+"    border-radius: 5px;\n"
+"    background-color: #F9F7F7;\n"
+"\n"
+"    font-family: Lucida Console;\n"
+"    padding: 5px;\n"
+"}\n"
+"QComboBox::drop-down {\n"
+"    subcontrol-origin: padding;\n"
+"    subcontrol-position: top right;\n"
+"    width: 30px;\n"
+"    border-left-width: 0px;\n"
+"}\n"
+"QComboBox::down-arrow {\n"
+"    image: url(\"resource/arrow_down.png\");\n"
+"    margin-right: 15px;\n"
+"    width: 20px;\n"
+"    height: 20px;\n"
+"}\n"
+"QComboBox QAbstractItemView {\n"
+"    border: 1.5px solid #3F72AF;\n"
+"    background-color: #F9F7F7;\n"
+"    font-size: 25px;\n"
+"    padding: 5px;\n"
+"    selection-background-color: #3F72AF;\n"
+"}\n"
+"\n"
+"QGroupBox#device_button_group {\n"
+"    border: 2px solid #DBE2EF;\n"
+"    border-radius: 5px;\n"
+"}\n"
+"QGroupBox#target_button_group {\n"
+"    border: 2px solid #DBE2EF;\n"
+"    border-radius: 5px;\n"
+"}\n"
+"")
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.output = QtWidgets.QPushButton(self.centralwidget)
@@ -26,32 +67,21 @@ class Ui_MainWindow(object):
         font.setItalic(False)
         font.setWeight(50)
         self.output.setFont(font)
-        self.output.setStyleSheet("QPushButton#output {\n"
-"        background-color: #007bff;\n"
-"        color: #ffffff;\n"
-"        border-radius: 5px;\n"
-"        border: none;\n"
-"    }\n"
-"    \n"
-"    QPushButton#output:hover {\n"
-"        background-color: #0056b3;\n"
-"        color: #ffffff;\n"
-"    }\n"
-"    \n"
-"    QPushButton#output:pressed {\n"
-"        background-color: #007bff;\n"
-"        color: #ffffff;\n"
-"        border: 2px solid #0056b3;\n"
-"    }\n"
-"    \n"
-"    QPushButton#output:focus {\n"
-"        border: none;\n"
-"        outline: none;\n"
-"    }\n"
-"    \n"
-"    QPushButton#output:focus:hover {\n"
-"        background-color: #0056b3;\n"
-"    }")
+        self.output.setStyleSheet("\n"
+"QPushButton#output {\n"
+"    background-color: #3F72AF;\n"
+"    color: #F9F7F7;\n"
+"    border-radius: 5px;\n"
+"    border: none;\n"
+"}\n"
+"\n"
+"QPushButton#output:hover {\n"
+"    background-color: #F9F7F7;\n"
+"    color: #3F72AF;\n"
+"    border-radius: 5px;\n"
+"    border: 2px solid #3F72AF;\n"
+"}\n"
+"")
         self.output.setObjectName("output")
         self.device_group = QtWidgets.QGroupBox(self.centralwidget)
         self.device_group.setGeometry(QtCore.QRect(40, 20, 1200, 300))
@@ -59,25 +89,26 @@ class Ui_MainWindow(object):
         font.setPointSize(14)
         self.device_group.setFont(font)
         self.device_group.setStyleSheet("QGroupBox#device_group {\n"
-"    border: 2px solid #4A4A4A;\n"
+"    border: 2px solid #112D4E;\n"
 "    border-radius: 15px;\n"
 "}")
         self.device_group.setTitle("")
         self.device_group.setAlignment(QtCore.Qt.AlignCenter)
         self.device_group.setObjectName("device_group")
         self.device_title = QtWidgets.QLabel(self.device_group)
-        self.device_title.setGeometry(QtCore.QRect(20, 20, 840, 30))
+        self.device_title.setGeometry(QtCore.QRect(140, 20, 720, 30))
         font = QtGui.QFont()
         font.setFamily("微軟正黑體")
         font.setPointSize(20)
         self.device_title.setFont(font)
         self.device_title.setCursor(QtGui.QCursor(QtCore.Qt.ArrowCursor))
+        self.device_title.setText("")
         self.device_title.setObjectName("device_title")
         self.comboBox = QtWidgets.QComboBox(self.device_group)
         self.comboBox.setGeometry(QtCore.QRect(870, 10, 310, 50))
         font = QtGui.QFont()
         font.setFamily("Lucida Console")
-        font.setPointSize(20)
+        font.setPointSize(15)
         self.comboBox.setFont(font)
         self.comboBox.setObjectName("comboBox")
         self.device_button_group = QtWidgets.QGroupBox(self.device_group)
@@ -85,31 +116,41 @@ class Ui_MainWindow(object):
         self.device_button_group.setStyleSheet("")
         self.device_button_group.setTitle("")
         self.device_button_group.setObjectName("device_button_group")
+        self.device_title_2 = QtWidgets.QLabel(self.device_group)
+        self.device_title_2.setGeometry(QtCore.QRect(20, 20, 121, 30))
+        font = QtGui.QFont()
+        font.setFamily("微軟正黑體")
+        font.setPointSize(20)
+        self.device_title_2.setFont(font)
+        self.device_title_2.setCursor(QtGui.QCursor(QtCore.Qt.ArrowCursor))
+        self.device_title_2.setStyleSheet("color: #112D4E;")
+        self.device_title_2.setObjectName("device_title_2")
         self.target_group = QtWidgets.QGroupBox(self.centralwidget)
         self.target_group.setGeometry(QtCore.QRect(40, 330, 1200, 300))
         font = QtGui.QFont()
         font.setPointSize(14)
         self.target_group.setFont(font)
         self.target_group.setStyleSheet("QGroupBox#target_group {\n"
-"    border: 2px solid #4A4A4A;\n"
+"    border: 2px solid #112D4E;\n"
 "    border-radius: 15px;\n"
 "}")
         self.target_group.setTitle("")
         self.target_group.setAlignment(QtCore.Qt.AlignCenter)
         self.target_group.setObjectName("target_group")
         self.target_title = QtWidgets.QLabel(self.target_group)
-        self.target_title.setGeometry(QtCore.QRect(20, 20, 840, 30))
+        self.target_title.setGeometry(QtCore.QRect(140, 20, 720, 30))
         font = QtGui.QFont()
         font.setFamily("微軟正黑體")
         font.setPointSize(20)
         self.target_title.setFont(font)
         self.target_title.setCursor(QtGui.QCursor(QtCore.Qt.ArrowCursor))
+        self.target_title.setText("")
         self.target_title.setObjectName("target_title")
         self.comboBox_2 = QtWidgets.QComboBox(self.target_group)
         self.comboBox_2.setGeometry(QtCore.QRect(870, 10, 310, 50))
         font = QtGui.QFont()
         font.setFamily("Lucida Console")
-        font.setPointSize(20)
+        font.setPointSize(15)
         self.comboBox_2.setFont(font)
         self.comboBox_2.setObjectName("comboBox_2")
         self.target_button_group = QtWidgets.QGroupBox(self.target_group)
@@ -117,38 +158,64 @@ class Ui_MainWindow(object):
         self.target_button_group.setStyleSheet("")
         self.target_button_group.setTitle("")
         self.target_button_group.setObjectName("target_button_group")
+        self.target_title_2 = QtWidgets.QLabel(self.target_group)
+        self.target_title_2.setGeometry(QtCore.QRect(20, 20, 121, 30))
+        font = QtGui.QFont()
+        font.setFamily("微軟正黑體")
+        font.setPointSize(20)
+        self.target_title_2.setFont(font)
+        self.target_title_2.setCursor(QtGui.QCursor(QtCore.Qt.ArrowCursor))
+        self.target_title_2.setStyleSheet("color: #112D4E;")
+        self.target_title_2.setObjectName("target_title_2")
         self.group_legend = QtWidgets.QGroupBox(self.centralwidget)
         self.group_legend.setGeometry(QtCore.QRect(40, 640, 91, 60))
         self.group_legend.setStyleSheet("border: none;")
         self.group_legend.setTitle("")
         self.group_legend.setObjectName("group_legend")
         self.label = QtWidgets.QLabel(self.group_legend)
-        self.label.setGeometry(QtCore.QRect(30, 21, 61, 15))
+        self.label.setGeometry(QtCore.QRect(30, 20, 61, 15))
+        font = QtGui.QFont()
+        font.setFamily("Verdana")
+        self.label.setFont(font)
         self.label.setObjectName("label")
         self.label_2 = QtWidgets.QLabel(self.group_legend)
-        self.label_2.setGeometry(QtCore.QRect(30, 37, 61, 15))
+        self.label_2.setGeometry(QtCore.QRect(30, 40, 61, 15))
+        font = QtGui.QFont()
+        font.setFamily("Verdana")
+        self.label_2.setFont(font)
         self.label_2.setObjectName("label_2")
         self.label_3 = QtWidgets.QLabel(self.group_legend)
-        self.label_3.setGeometry(QtCore.QRect(30, 5, 61, 15))
+        self.label_3.setGeometry(QtCore.QRect(30, 0, 61, 15))
+        font = QtGui.QFont()
+        font.setFamily("Verdana")
+        self.label_3.setFont(font)
         self.label_3.setObjectName("label_3")
         self.label_4 = QtWidgets.QLabel(self.group_legend)
-        self.label_4.setGeometry(QtCore.QRect(10, 5, 15, 15))
-        self.label_4.setStyleSheet("border: 0.5px solid black;\n"
-"background-color: #ECF2FF;")
+        self.label_4.setGeometry(QtCore.QRect(10, 0, 15, 15))
+        self.label_4.setStyleSheet("border: 0.5px solid #3F72AF;\n"
+"background-color: #CADEFC;")
         self.label_4.setText("")
         self.label_4.setObjectName("label_4")
         self.label_5 = QtWidgets.QLabel(self.group_legend)
-        self.label_5.setGeometry(QtCore.QRect(10, 21, 15, 15))
-        self.label_5.setStyleSheet("border: 0.5px solid black;\n"
-"background-color: #D7E9B9;")
+        self.label_5.setGeometry(QtCore.QRect(10, 20, 15, 15))
+        self.label_5.setStyleSheet("border: 0.5px solid #3F72AF;\n"
+"background-color: #D3E0DC;")
         self.label_5.setText("")
         self.label_5.setObjectName("label_5")
         self.label_6 = QtWidgets.QLabel(self.group_legend)
-        self.label_6.setGeometry(QtCore.QRect(10, 37, 15, 15))
-        self.label_6.setStyleSheet("border: 0.5px solid black;\n"
-"background-color: #FFC6D3;")
+        self.label_6.setGeometry(QtCore.QRect(10, 40, 15, 15))
+        self.label_6.setStyleSheet("border: 0.5px solid #3F72AF;\n"
+"background-color: #E9D5DA;")
         self.label_6.setText("")
         self.label_6.setObjectName("label_6")
+        self.refresh_button = QtWidgets.QPushButton(self.centralwidget)
+        self.refresh_button.setGeometry(QtCore.QRect(1180, 660, 50, 50))
+        self.refresh_button.setStyleSheet("QPushButton {\n"
+"    image: url(\"resource/refresh.png\");\n"
+"    border:none;\n"
+"}")
+        self.refresh_button.setText("")
+        self.refresh_button.setObjectName("refresh_button")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 1280, 21))
@@ -165,8 +232,8 @@ class Ui_MainWindow(object):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.output.setText(_translate("MainWindow", "輸出配對表"))
-        self.device_title.setText(_translate("MainWindow", "來源裝置:"))
-        self.target_title.setText(_translate("MainWindow", "目標裝置:"))
+        self.device_title_2.setText(_translate("MainWindow", "來源裝置:"))
+        self.target_title_2.setText(_translate("MainWindow", "目標裝置:"))
         self.label.setText(_translate("MainWindow", "Input"))
         self.label_2.setText(_translate("MainWindow", "Output"))
         self.label_3.setText(_translate("MainWindow", "Normal"))

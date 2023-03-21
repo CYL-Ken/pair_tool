@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file '.\pair_window.ui'
+# Form implementation generated from reading ui file '.\UI\pair_window.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.7
 #
@@ -15,6 +15,18 @@ class Ui_PairWindow(object):
     def setupUi(self, PairWindow):
         PairWindow.setObjectName("PairWindow")
         PairWindow.resize(640, 609)
+        PairWindow.setStyleSheet("#PairWindow {\n"
+"    background-color: #F9F7F7;\n"
+"}\n"
+"\n"
+"QLabel#source_channel {\n"
+"    border: 1px solid #3F72AF;\n"
+"    border-radius: 5px;\n"
+"}\n"
+"QLabel#target_channel {\n"
+"    border: 1px solid #3F72AF;\n"
+"    border-radius: 5px;\n"
+"}")
         self.confirm = QtWidgets.QPushButton(PairWindow)
         self.confirm.setGeometry(QtCore.QRect(260, 530, 120, 50))
         font = QtGui.QFont()
@@ -24,32 +36,21 @@ class Ui_PairWindow(object):
         font.setItalic(False)
         font.setWeight(50)
         self.confirm.setFont(font)
-        self.confirm.setStyleSheet("QPushButton#output {\n"
-"        background-color: #007bff;\n"
-"        color: #ffffff;\n"
-"        border-radius: 5px;\n"
-"        border: none;\n"
-"    }\n"
-"    \n"
-"    QPushButton#output:hover {\n"
-"        background-color: #0056b3;\n"
-"        color: #ffffff;\n"
-"    }\n"
-"    \n"
-"    QPushButton#output:pressed {\n"
-"        background-color: #007bff;\n"
-"        color: #ffffff;\n"
-"        border: 2px solid #0056b3;\n"
-"    }\n"
-"    \n"
-"    QPushButton#output:focus {\n"
-"        border: none;\n"
-"        outline: none;\n"
-"    }\n"
-"    \n"
-"    QPushButton#output:focus:hover {\n"
-"        background-color: #0056b3;\n"
-"    }")
+        self.confirm.setStyleSheet("\n"
+"QPushButton#confirm {\n"
+"    background-color: #3F72AF;\n"
+"    color: #F9F7F7;\n"
+"    border-radius: 5px;\n"
+"    border: none;\n"
+"}\n"
+"\n"
+"QPushButton#confirm:hover {\n"
+"    background-color: #F9F7F7;\n"
+"    color: #3F72AF;\n"
+"    border-radius: 5px;\n"
+"    border: 2px solid #3F72AF;\n"
+"}\n"
+"")
         self.confirm.setObjectName("confirm")
         self.target_group = QtWidgets.QGroupBox(PairWindow)
         self.target_group.setGeometry(QtCore.QRect(400, 10, 171, 91))
@@ -57,12 +58,13 @@ class Ui_PairWindow(object):
         self.target_group.setObjectName("target_group")
         self.target_channel = QtWidgets.QLabel(self.target_group)
         self.target_channel.setGeometry(QtCore.QRect(70, 40, 40, 40))
-        self.target_channel.setStyleSheet("border: 1px solid black;\n"
-"border-radius: 15px;\n"
-"padding: 5px 1px;\n"
-"font-size: 20px;\n"
-"font-weight: bold;\n"
-"font-family: Consolas;")
+        font = QtGui.QFont()
+        font.setFamily("Consolas")
+        font.setPointSize(25)
+        font.setBold(True)
+        font.setWeight(75)
+        self.target_channel.setFont(font)
+        self.target_channel.setStyleSheet("")
         self.target_channel.setAlignment(QtCore.Qt.AlignCenter)
         self.target_channel.setObjectName("target_channel")
         self.target_title = QtWidgets.QLabel(self.target_group)
@@ -77,16 +79,18 @@ class Ui_PairWindow(object):
         self.target_title.setObjectName("target_title")
         self.source_group = QtWidgets.QGroupBox(PairWindow)
         self.source_group.setGeometry(QtCore.QRect(69, 10, 171, 90))
+        self.source_group.setStyleSheet("")
         self.source_group.setTitle("")
         self.source_group.setObjectName("source_group")
         self.source_channel = QtWidgets.QLabel(self.source_group)
         self.source_channel.setGeometry(QtCore.QRect(70, 40, 40, 40))
-        self.source_channel.setStyleSheet("border: 1px solid black;\n"
-"border-radius: 15px;\n"
-"padding: 5px 1px;\n"
-"font-size: 20px;\n"
-"font-weight: bold;\n"
-"font-family: Consolas;")
+        font = QtGui.QFont()
+        font.setFamily("Consolas")
+        font.setPointSize(25)
+        font.setBold(True)
+        font.setWeight(75)
+        self.source_channel.setFont(font)
+        self.source_channel.setStyleSheet("")
         self.source_channel.setAlignment(QtCore.Qt.AlignCenter)
         self.source_channel.setObjectName("source_channel")
         self.source_title = QtWidgets.QLabel(self.source_group)
@@ -113,14 +117,25 @@ class Ui_PairWindow(object):
 "}\n"
 "#cmd_group{\n"
 "border:0;\n"
+"}\n"
+"QWidget#container {\n"
+"    background-color: #DBE2EF;\n"
+"}\n"
+"QScrollArea {\n"
+"    border: 1px solid #DBE2EF;\n"
+"    background-color: #DBE2EF;\n"
 "}")
         self.cmd_group.setObjectName("cmd_group")
         self.input_group = QtWidgets.QGroupBox(PairWindow)
         self.input_group.setGeometry(QtCore.QRect(69, 270, 501, 241))
+        self.input_group.setStyleSheet("#input_group {\n"
+"    border: 1px solid #3F72AF;\n"
+"    border-radius: 10px;\n"
+"}")
         self.input_group.setTitle("")
         self.input_group.setObjectName("input_group")
         self.add = QtWidgets.QPushButton(self.input_group)
-        self.add.setGeometry(QtCore.QRect(110, 200, 281, 31))
+        self.add.setGeometry(QtCore.QRect(110, 190, 281, 41))
         font = QtGui.QFont()
         font.setFamily("Microsoft YaHei")
         font.setPointSize(16)
@@ -128,32 +143,21 @@ class Ui_PairWindow(object):
         font.setItalic(False)
         font.setWeight(50)
         self.add.setFont(font)
-        self.add.setStyleSheet("QPushButton#output {\n"
-"        background-color: #007bff;\n"
-"        color: #ffffff;\n"
-"        border-radius: 5px;\n"
-"        border: none;\n"
-"    }\n"
-"    \n"
-"    QPushButton#output:hover {\n"
-"        background-color: #0056b3;\n"
-"        color: #ffffff;\n"
-"    }\n"
-"    \n"
-"    QPushButton#output:pressed {\n"
-"        background-color: #007bff;\n"
-"        color: #ffffff;\n"
-"        border: 2px solid #0056b3;\n"
-"    }\n"
-"    \n"
-"    QPushButton#output:focus {\n"
-"        border: none;\n"
-"        outline: none;\n"
-"    }\n"
-"    \n"
-"    QPushButton#output:focus:hover {\n"
-"        background-color: #0056b3;\n"
-"    }")
+        self.add.setStyleSheet("\n"
+"QPushButton#add {\n"
+"    background-color: #3F72AF;\n"
+"    color: #F9F7F7;\n"
+"    border-radius: 5px;\n"
+"    border: none;\n"
+"}\n"
+"\n"
+"QPushButton#add:hover {\n"
+"    background-color: #F9F7F7;\n"
+"    color: #3F72AF;\n"
+"    border-radius: 5px;\n"
+"    border: 2px solid #3F72AF;\n"
+"}\n"
+"")
         self.add.setObjectName("add")
         self.label = QtWidgets.QLabel(self.input_group)
         self.label.setGeometry(QtCore.QRect(20, 20, 131, 30))
@@ -227,7 +231,7 @@ class Ui_PairWindow(object):
         self.target_title.setText(_translate("PairWindow", "Target Endpoint"))
         self.source_channel.setText(_translate("PairWindow", "2"))
         self.source_title.setText(_translate("PairWindow", "Source Endpoint"))
-        self.cmd_group.setTitle(_translate("PairWindow", "Added Commands"))
+        self.cmd_group.setTitle(_translate("PairWindow", "已加入的配對"))
         self.add.setText(_translate("PairWindow", "新增至列表"))
         self.label.setText(_translate("PairWindow", "Source Command"))
         self.label_4.setText(_translate("PairWindow", "Target Command"))
