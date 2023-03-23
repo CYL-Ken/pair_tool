@@ -1,0 +1,1442 @@
+[
+    {
+        "cmd": "receive-switch-on",
+        "type": 0,
+        "description": "SCU#1",
+        "endpoint": 1,
+        "check-rules": [],
+        "actions": [
+            {
+                "cmd": "level-move-to",
+                "mac-addr": "d0:14:11:b0:02:1f",
+                "endpoint": 4,
+                "level": 255,
+                "duration": 50,
+                "timeout-ms": 1000,
+                "delay-ms": 0
+            }
+        ]
+    },
+    {
+        "cmd": "receive-switch-on",
+        "type": 0,
+        "description": "SCU#2",
+        "endpoint": 2,
+        "check-rules": [],
+        "actions": [
+            {
+                "cmd": "level-move-to",
+                "mac-addr": "d0:14:11:b0:02:1f",
+                "endpoint": 2,
+                "level": 255,
+                "duration": 50,
+                "timeout-ms": 1000,
+                "delay-ms": 0
+            }
+        ]
+    },
+    {
+        "cmd": "receive-switch-on",
+        "type": 0,
+        "description": "SCU#3",
+        "endpoint": 3,
+        "check-rules": [],
+        "actions": [
+            {
+                "cmd": "level-move-to",
+                "mac-addr": "d0:14:11:b0:02:1f",
+                "endpoint": 1,
+                "level": 255,
+                "duration": 50,
+                "timeout-ms": 1000,
+                "delay-ms": 0
+            }
+        ]
+    },
+    {
+        "cmd": "receive-switch-on",
+        "type": 0,
+        "description": "SCU#13",
+        "endpoint": 13,
+        "check-rules": [],
+        "actions": [
+            {
+                "cmd": "level-move-to",
+                "mac-addr": "d0:14:11:b0:01:24",
+                "endpoint": 2,
+                "level": 255,
+                "duration": 50,
+                "timeout-ms": 1000,
+                "delay-ms": 0
+            }
+        ]
+    },
+    {
+        "cmd": "receive-switch-on",
+        "type": 0,
+        "description": "SCU#14",
+        "endpoint": 14,
+        "check-rules": [],
+        "actions": [
+            {
+                "cmd": "level-move-to",
+                "mac-addr": "d0:14:11:b0:01:24",
+                "endpoint": 4,
+                "level": 255,
+                "duration": 50,
+                "timeout-ms": 1000,
+                "delay-ms": 0
+            }
+        ]
+    },
+    {
+        "cmd": "receive-switch-on",
+        "type": 0,
+        "description": "SCU#19",
+        "endpoint": 19,
+        "check-rules": [],
+        "actions": [
+            {
+                "cmd": "level-move-to",
+                "mac-addr": "d0:14:11:b0:02:66",
+                "endpoint": 4,
+                "level": 255,
+                "duration": 50,
+                "timeout-ms": 1000,
+                "delay-ms": 0
+            }
+        ]
+    },
+    {
+        "cmd": "receive-switch-on",
+        "type": 0,
+        "description": "SCU#20",
+        "endpoint": 20,
+        "check-rules": [],
+        "actions": [
+            {
+                "cmd": "level-move-to",
+                "mac-addr": "d0:14:11:b0:02:66",
+                "endpoint": 3,
+                "level": 255,
+                "duration": 50,
+                "timeout-ms": 1000,
+                "delay-ms": 0
+            }
+        ]
+    },
+    {
+        "cmd": "receive-switch-on",
+        "type": 0,
+        "description": "SCU#25",
+        "endpoint": 25,
+        "check-rules": [],
+        "actions": [
+            {
+                "cmd": "level-move-to",
+                "mac-addr": "d0:14:11:b0:01:2a",
+                "endpoint": 1,
+                "level": 255,
+                "duration": 50,
+                "timeout-ms": 1000,
+                "delay-ms": 0
+            }
+        ]
+    },
+    {
+        "cmd": "receive-switch-on",
+        "type": 0,
+        "description": "SCU#26",
+        "endpoint": 26,
+        "check-rules": [],
+        "actions": [
+            {
+                "cmd": "level-move-to",
+                "mac-addr": "d0:14:11:b0:01:2a",
+                "endpoint": 2,
+                "level": 255,
+                "duration": 50,
+                "timeout-ms": 1000,
+                "delay-ms": 0
+            }
+        ]
+    },
+    {
+        "cmd": "receive-switch-on",
+        "type": 0,
+        "description": "SCU#27",
+        "endpoint": 27,
+        "check-rules": [],
+        "actions": [
+            {
+                "cmd": "level-move-to",
+                "mac-addr": "d0:14:11:b0:01:2a",
+                "endpoint": 4,
+                "level": 255,
+                "duration": 50,
+                "timeout-ms": 1000,
+                "delay-ms": 0
+            }
+        ]
+    },
+    {
+        "cmd": "receive-switch-on",
+        "type": 0,
+        "description": "SCU#31",
+        "endpoint": 31,
+        "check-rules": [],
+        "actions": [
+            {
+                "cmd": "level-move-to",
+                "mac-addr": "d0:14:11:b0:02:66",
+                "endpoint": 1,
+                "level": 255,
+                "duration": 50,
+                "timeout-ms": 1000,
+                "delay-ms": 0
+            }
+        ]
+    },
+    {
+        "cmd": "receive-switch-on",
+        "type": 0,
+        "description": "SCU#32",
+        "endpoint": 32,
+        "check-rules": [],
+        "actions": [
+            {
+                "cmd": "level-move-to",
+                "mac-addr": "d0:14:11:b0:01:2a",
+                "endpoint": 3,
+                "level": 255,
+                "duration": 50,
+                "timeout-ms": 1000,
+                "delay-ms": 0
+            }
+        ]
+    },
+    {
+        "cmd": "receive-switch-on",
+        "type": 0,
+        "description": "SCU#37",
+        "endpoint": 37,
+        "check-rules": [],
+        "actions": [
+            {
+                "cmd": "level-move-to",
+                "mac-addr": "d0:14:11:b0:03:0b",
+                "endpoint": 1,
+                "level": 255,
+                "duration": 50,
+                "timeout-ms": 1000,
+                "delay-ms": 0
+            }
+        ]
+    },
+    {
+        "cmd": "receive-switch-on",
+        "type": 0,
+        "description": "SCU#38",
+        "endpoint": 38,
+        "check-rules": [],
+        "actions": [
+            {
+                "cmd": "level-move-to",
+                "mac-addr": "d0:14:11:b0:02:66",
+                "endpoint": 1,
+                "level": 255,
+                "duration": 50,
+                "timeout-ms": 1000,
+                "delay-ms": 0
+            }
+        ]
+    },
+    {
+        "cmd": "receive-switch-on",
+        "type": 0,
+        "description": "SCU#43",
+        "endpoint": 43,
+        "check-rules": [],
+        "actions": [
+            {
+                "cmd": "level-move-to",
+                "mac-addr": "d0:14:11:b0:01:24",
+                "endpoint": 1,
+                "level": 255,
+                "duration": 50,
+                "timeout-ms": 1000,
+                "delay-ms": 0
+            }
+        ]
+    },
+    {
+        "cmd": "receive-switch-on",
+        "type": 0,
+        "description": "SCU#44",
+        "endpoint": 44,
+        "check-rules": [],
+        "actions": [
+            {
+                "cmd": "level-move-to",
+                "mac-addr": "d0:14:11:b0:01:24",
+                "endpoint": 3,
+                "level": 255,
+                "duration": 50,
+                "timeout-ms": 1000,
+                "delay-ms": 0
+            }
+        ]
+    },
+    {
+        "cmd": "receive-switch-on",
+        "type": 0,
+        "description": "SCU#49",
+        "endpoint": 49,
+        "check-rules": [],
+        "actions": [
+            {
+                "cmd": "level-move-to",
+                "mac-addr": "d0:14:11:b0:02:1f",
+                "endpoint": 3,
+                "level": 255,
+                "duration": 50,
+                "timeout-ms": 1000,
+                "delay-ms": 0
+            }
+        ]
+    },
+    {
+        "cmd": "receive-switch-on",
+        "type": 0,
+        "description": "SCU#50",
+        "endpoint": 50,
+        "check-rules": [],
+        "actions": [
+            {
+                "cmd": "level-move-to",
+                "mac-addr": "d0:14:11:b0:01:2a",
+                "endpoint": 4,
+                "level": 255,
+                "duration": 50,
+                "timeout-ms": 1000,
+                "delay-ms": 0
+            }
+        ]
+    },
+    {
+        "cmd": "receive-switch-on",
+        "type": 0,
+        "description": "SCU#85",
+        "endpoint": 85,
+        "check-rules": [],
+        "actions": [
+            {
+                "cmd": "level-move-to",
+                "mac-addr": "d0:14:11:b0:02:58",
+                "endpoint": 1,
+                "level": 255,
+                "duration": 50,
+                "timeout-ms": 1000,
+                "delay-ms": 0
+            }
+        ]
+    },
+    {
+        "cmd": "receive-switch-on",
+        "type": 0,
+        "description": "SCU#86",
+        "endpoint": 86,
+        "check-rules": [],
+        "actions": [
+            {
+                "cmd": "level-move-to",
+                "mac-addr": "d0:14:11:b0:02:66",
+                "endpoint": 2,
+                "level": 255,
+                "duration": 50,
+                "timeout-ms": 1000,
+                "delay-ms": 0
+            }
+        ]
+    },
+    {
+        "cmd": "switch-on",
+        "type": 0,
+        "description": "SCU#1",
+        "endpoint": 1,
+        "check-rules": [],
+        "actions": [
+            {
+                "cmd": "level-move-to",
+                "mac-addr": "d0:14:11:b0:02:1f",
+                "endpoint": 4,
+                "level": 255,
+                "duration": 50,
+                "timeout-ms": 1000,
+                "delay-ms": 0
+            }
+        ]
+    },
+    {
+        "cmd": "switch-on",
+        "type": 0,
+        "description": "SCU#2",
+        "endpoint": 2,
+        "check-rules": [],
+        "actions": [
+            {
+                "cmd": "level-move-to",
+                "mac-addr": "d0:14:11:b0:02:1f",
+                "endpoint": 2,
+                "level": 255,
+                "duration": 50,
+                "timeout-ms": 1000,
+                "delay-ms": 0
+            }
+        ]
+    },
+    {
+        "cmd": "switch-on",
+        "type": 0,
+        "description": "SCU#3",
+        "endpoint": 3,
+        "check-rules": [],
+        "actions": [
+            {
+                "cmd": "level-move-to",
+                "mac-addr": "d0:14:11:b0:02:1f",
+                "endpoint": 1,
+                "level": 255,
+                "duration": 50,
+                "timeout-ms": 1000,
+                "delay-ms": 0
+            }
+        ]
+    },
+    {
+        "cmd": "switch-on",
+        "type": 0,
+        "description": "SCU#13",
+        "endpoint": 13,
+        "check-rules": [],
+        "actions": [
+            {
+                "cmd": "level-move-to",
+                "mac-addr": "d0:14:11:b0:01:24",
+                "endpoint": 2,
+                "level": 255,
+                "duration": 50,
+                "timeout-ms": 1000,
+                "delay-ms": 0
+            }
+        ]
+    },
+    {
+        "cmd": "switch-on",
+        "type": 0,
+        "description": "SCU#14",
+        "endpoint": 14,
+        "check-rules": [],
+        "actions": [
+            {
+                "cmd": "level-move-to",
+                "mac-addr": "d0:14:11:b0:01:24",
+                "endpoint": 4,
+                "level": 255,
+                "duration": 50,
+                "timeout-ms": 1000,
+                "delay-ms": 0
+            }
+        ]
+    },
+    {
+        "cmd": "switch-on",
+        "type": 0,
+        "description": "SCU#19",
+        "endpoint": 19,
+        "check-rules": [],
+        "actions": [
+            {
+                "cmd": "level-move-to",
+                "mac-addr": "d0:14:11:b0:02:66",
+                "endpoint": 4,
+                "level": 255,
+                "duration": 50,
+                "timeout-ms": 1000,
+                "delay-ms": 0
+            }
+        ]
+    },
+    {
+        "cmd": "switch-on",
+        "type": 0,
+        "description": "SCU#20",
+        "endpoint": 20,
+        "check-rules": [],
+        "actions": [
+            {
+                "cmd": "level-move-to",
+                "mac-addr": "d0:14:11:b0:02:66",
+                "endpoint": 3,
+                "level": 255,
+                "duration": 50,
+                "timeout-ms": 1000,
+                "delay-ms": 0
+            }
+        ]
+    },
+    {
+        "cmd": "switch-on",
+        "type": 0,
+        "description": "SCU#25",
+        "endpoint": 25,
+        "check-rules": [],
+        "actions": [
+            {
+                "cmd": "level-move-to",
+                "mac-addr": "d0:14:11:b0:01:2a",
+                "endpoint": 1,
+                "level": 255,
+                "duration": 50,
+                "timeout-ms": 1000,
+                "delay-ms": 0
+            }
+        ]
+    },
+    {
+        "cmd": "switch-on",
+        "type": 0,
+        "description": "SCU#26",
+        "endpoint": 26,
+        "check-rules": [],
+        "actions": [
+            {
+                "cmd": "level-move-to",
+                "mac-addr": "d0:14:11:b0:01:2a",
+                "endpoint": 2,
+                "level": 255,
+                "duration": 50,
+                "timeout-ms": 1000,
+                "delay-ms": 0
+            }
+        ]
+    },
+    {
+        "cmd": "switch-on",
+        "type": 0,
+        "description": "SCU#27",
+        "endpoint": 27,
+        "check-rules": [],
+        "actions": [
+            {
+                "cmd": "level-move-to",
+                "mac-addr": "d0:14:11:b0:01:2a",
+                "endpoint": 4,
+                "level": 255,
+                "duration": 50,
+                "timeout-ms": 1000,
+                "delay-ms": 0
+            }
+        ]
+    },
+    {
+        "cmd": "switch-on",
+        "type": 0,
+        "description": "SCU#31",
+        "endpoint": 31,
+        "check-rules": [],
+        "actions": [
+            {
+                "cmd": "level-move-to",
+                "mac-addr": "d0:14:11:b0:02:66",
+                "endpoint": 1,
+                "level": 255,
+                "duration": 50,
+                "timeout-ms": 1000,
+                "delay-ms": 0
+            }
+        ]
+    },
+    {
+        "cmd": "switch-on",
+        "type": 0,
+        "description": "SCU#32",
+        "endpoint": 32,
+        "check-rules": [],
+        "actions": [
+            {
+                "cmd": "level-move-to",
+                "mac-addr": "d0:14:11:b0:01:2a",
+                "endpoint": 3,
+                "level": 255,
+                "duration": 50,
+                "timeout-ms": 1000,
+                "delay-ms": 0
+            }
+        ]
+    },
+    {
+        "cmd": "switch-on",
+        "type": 0,
+        "description": "SCU#37",
+        "endpoint": 37,
+        "check-rules": [],
+        "actions": [
+            {
+                "cmd": "level-move-to",
+                "mac-addr": "d0:14:11:b0:03:0b",
+                "endpoint": 1,
+                "level": 255,
+                "duration": 50,
+                "timeout-ms": 1000,
+                "delay-ms": 0
+            }
+        ]
+    },
+    {
+        "cmd": "switch-on",
+        "type": 0,
+        "description": "SCU#38",
+        "endpoint": 38,
+        "check-rules": [],
+        "actions": [
+            {
+                "cmd": "level-move-to",
+                "mac-addr": "d0:14:11:b0:02:66",
+                "endpoint": 1,
+                "level": 255,
+                "duration": 50,
+                "timeout-ms": 1000,
+                "delay-ms": 0
+            }
+        ]
+    },
+    {
+        "cmd": "switch-on",
+        "type": 0,
+        "description": "SCU#43",
+        "endpoint": 43,
+        "check-rules": [],
+        "actions": [
+            {
+                "cmd": "level-move-to",
+                "mac-addr": "d0:14:11:b0:01:24",
+                "endpoint": 1,
+                "level": 255,
+                "duration": 50,
+                "timeout-ms": 1000,
+                "delay-ms": 0
+            }
+        ]
+    },
+    {
+        "cmd": "switch-on",
+        "type": 0,
+        "description": "SCU#44",
+        "endpoint": 44,
+        "check-rules": [],
+        "actions": [
+            {
+                "cmd": "level-move-to",
+                "mac-addr": "d0:14:11:b0:01:24",
+                "endpoint": 3,
+                "level": 255,
+                "duration": 50,
+                "timeout-ms": 1000,
+                "delay-ms": 0
+            }
+        ]
+    },
+    {
+        "cmd": "switch-on",
+        "type": 0,
+        "description": "SCU#49",
+        "endpoint": 49,
+        "check-rules": [],
+        "actions": [
+            {
+                "cmd": "level-move-to",
+                "mac-addr": "d0:14:11:b0:02:1f",
+                "endpoint": 3,
+                "level": 255,
+                "duration": 50,
+                "timeout-ms": 1000,
+                "delay-ms": 0
+            }
+        ]
+    },
+    {
+        "cmd": "switch-on",
+        "type": 0,
+        "description": "SCU#50",
+        "endpoint": 50,
+        "check-rules": [],
+        "actions": [
+            {
+                "cmd": "level-move-to",
+                "mac-addr": "d0:14:11:b0:01:2a",
+                "endpoint": 4,
+                "level": 255,
+                "duration": 50,
+                "timeout-ms": 1000,
+                "delay-ms": 0
+            }
+        ]
+    },
+    {
+        "cmd": "switch-on",
+        "type": 0,
+        "description": "SCU#85",
+        "endpoint": 85,
+        "check-rules": [],
+        "actions": [
+            {
+                "cmd": "level-move-to",
+                "mac-addr": "d0:14:11:b0:02:58",
+                "endpoint": 1,
+                "level": 255,
+                "duration": 50,
+                "timeout-ms": 1000,
+                "delay-ms": 0
+            }
+        ]
+    },
+    {
+        "cmd": "switch-on",
+        "type": 0,
+        "description": "SCU#86",
+        "endpoint": 86,
+        "check-rules": [],
+        "actions": [
+            {
+                "cmd": "level-move-to",
+                "mac-addr": "d0:14:11:b0:02:66",
+                "endpoint": 2,
+                "level": 255,
+                "duration": 50,
+                "timeout-ms": 1000,
+                "delay-ms": 0
+            }
+        ]
+    },
+    {
+        "cmd": "receive-switch-off",
+        "type": 0,
+        "description": "SCU#1",
+        "endpoint": 1,
+        "check-rules": [],
+        "actions": [
+            {
+                "cmd": "level-move-to",
+                "mac-addr": "d0:14:11:b0:02:1f",
+                "endpoint": 4,
+                "level": 0,
+                "duration": 50,
+                "timeout-ms": 1000,
+                "delay-ms": 0
+            }
+        ]
+    },
+    {
+        "cmd": "receive-switch-off",
+        "type": 0,
+        "description": "SCU#2",
+        "endpoint": 2,
+        "check-rules": [],
+        "actions": [
+            {
+                "cmd": "level-move-to",
+                "mac-addr": "d0:14:11:b0:02:1f",
+                "endpoint": 2,
+                "level": 0,
+                "duration": 50,
+                "timeout-ms": 1000,
+                "delay-ms": 0
+            }
+        ]
+    },
+    {
+        "cmd": "receive-switch-off",
+        "type": 0,
+        "description": "SCU#3",
+        "endpoint": 3,
+        "check-rules": [],
+        "actions": [
+            {
+                "cmd": "level-move-to",
+                "mac-addr": "d0:14:11:b0:02:1f",
+                "endpoint": 1,
+                "level": 0,
+                "duration": 50,
+                "timeout-ms": 1000,
+                "delay-ms": 0
+            }
+        ]
+    },
+    {
+        "cmd": "receive-switch-off",
+        "type": 0,
+        "description": "SCU#13",
+        "endpoint": 13,
+        "check-rules": [],
+        "actions": [
+            {
+                "cmd": "level-move-to",
+                "mac-addr": "d0:14:11:b0:01:24",
+                "endpoint": 2,
+                "level": 0,
+                "duration": 50,
+                "timeout-ms": 1000,
+                "delay-ms": 0
+            }
+        ]
+    },
+    {
+        "cmd": "receive-switch-off",
+        "type": 0,
+        "description": "SCU#14",
+        "endpoint": 14,
+        "check-rules": [],
+        "actions": [
+            {
+                "cmd": "level-move-to",
+                "mac-addr": "d0:14:11:b0:01:24",
+                "endpoint": 4,
+                "level": 0,
+                "duration": 50,
+                "timeout-ms": 1000,
+                "delay-ms": 0
+            }
+        ]
+    },
+    {
+        "cmd": "receive-switch-off",
+        "type": 0,
+        "description": "SCU#19",
+        "endpoint": 19,
+        "check-rules": [],
+        "actions": [
+            {
+                "cmd": "level-move-to",
+                "mac-addr": "d0:14:11:b0:02:66",
+                "endpoint": 4,
+                "level": 0,
+                "duration": 50,
+                "timeout-ms": 1000,
+                "delay-ms": 0
+            }
+        ]
+    },
+    {
+        "cmd": "receive-switch-off",
+        "type": 0,
+        "description": "SCU#20",
+        "endpoint": 20,
+        "check-rules": [],
+        "actions": [
+            {
+                "cmd": "level-move-to",
+                "mac-addr": "d0:14:11:b0:02:66",
+                "endpoint": 3,
+                "level": 0,
+                "duration": 50,
+                "timeout-ms": 1000,
+                "delay-ms": 0
+            }
+        ]
+    },
+    {
+        "cmd": "receive-switch-off",
+        "type": 0,
+        "description": "SCU#25",
+        "endpoint": 25,
+        "check-rules": [],
+        "actions": [
+            {
+                "cmd": "level-move-to",
+                "mac-addr": "d0:14:11:b0:01:2a",
+                "endpoint": 1,
+                "level": 0,
+                "duration": 50,
+                "timeout-ms": 1000,
+                "delay-ms": 0
+            }
+        ]
+    },
+    {
+        "cmd": "receive-switch-off",
+        "type": 0,
+        "description": "SCU#26",
+        "endpoint": 26,
+        "check-rules": [],
+        "actions": [
+            {
+                "cmd": "level-move-to",
+                "mac-addr": "d0:14:11:b0:01:2a",
+                "endpoint": 2,
+                "level": 0,
+                "duration": 50,
+                "timeout-ms": 1000,
+                "delay-ms": 0
+            }
+        ]
+    },
+    {
+        "cmd": "receive-switch-off",
+        "type": 0,
+        "description": "SCU#27",
+        "endpoint": 27,
+        "check-rules": [],
+        "actions": [
+            {
+                "cmd": "level-move-to",
+                "mac-addr": "d0:14:11:b0:01:2a",
+                "endpoint": 4,
+                "level": 0,
+                "duration": 50,
+                "timeout-ms": 1000,
+                "delay-ms": 0
+            }
+        ]
+    },
+    {
+        "cmd": "receive-switch-off",
+        "type": 0,
+        "description": "SCU#31",
+        "endpoint": 31,
+        "check-rules": [],
+        "actions": [
+            {
+                "cmd": "level-move-to",
+                "mac-addr": "d0:14:11:b0:02:66",
+                "endpoint": 1,
+                "level": 0,
+                "duration": 50,
+                "timeout-ms": 1000,
+                "delay-ms": 0
+            }
+        ]
+    },
+    {
+        "cmd": "receive-switch-off",
+        "type": 0,
+        "description": "SCU#32",
+        "endpoint": 32,
+        "check-rules": [],
+        "actions": [
+            {
+                "cmd": "level-move-to",
+                "mac-addr": "d0:14:11:b0:01:2a",
+                "endpoint": 3,
+                "level": 0,
+                "duration": 50,
+                "timeout-ms": 1000,
+                "delay-ms": 0
+            }
+        ]
+    },
+    {
+        "cmd": "receive-switch-off",
+        "type": 0,
+        "description": "SCU#37",
+        "endpoint": 37,
+        "check-rules": [],
+        "actions": [
+            {
+                "cmd": "level-move-to",
+                "mac-addr": "d0:14:11:b0:03:0b",
+                "endpoint": 1,
+                "level": 0,
+                "duration": 50,
+                "timeout-ms": 1000,
+                "delay-ms": 0
+            }
+        ]
+    },
+    {
+        "cmd": "receive-switch-off",
+        "type": 0,
+        "description": "SCU#38",
+        "endpoint": 38,
+        "check-rules": [],
+        "actions": [
+            {
+                "cmd": "level-move-to",
+                "mac-addr": "d0:14:11:b0:02:66",
+                "endpoint": 1,
+                "level": 0,
+                "duration": 50,
+                "timeout-ms": 1000,
+                "delay-ms": 0
+            }
+        ]
+    },
+    {
+        "cmd": "receive-switch-off",
+        "type": 0,
+        "description": "SCU#43",
+        "endpoint": 43,
+        "check-rules": [],
+        "actions": [
+            {
+                "cmd": "level-move-to",
+                "mac-addr": "d0:14:11:b0:01:24",
+                "endpoint": 1,
+                "level": 0,
+                "duration": 50,
+                "timeout-ms": 1000,
+                "delay-ms": 0
+            }
+        ]
+    },
+    {
+        "cmd": "receive-switch-off",
+        "type": 0,
+        "description": "SCU#44",
+        "endpoint": 44,
+        "check-rules": [],
+        "actions": [
+            {
+                "cmd": "level-move-to",
+                "mac-addr": "d0:14:11:b0:01:24",
+                "endpoint": 3,
+                "level": 0,
+                "duration": 50,
+                "timeout-ms": 1000,
+                "delay-ms": 0
+            }
+        ]
+    },
+    {
+        "cmd": "receive-switch-off",
+        "type": 0,
+        "description": "SCU#49",
+        "endpoint": 49,
+        "check-rules": [],
+        "actions": [
+            {
+                "cmd": "level-move-to",
+                "mac-addr": "d0:14:11:b0:02:1f",
+                "endpoint": 3,
+                "level": 0,
+                "duration": 50,
+                "timeout-ms": 1000,
+                "delay-ms": 0
+            }
+        ]
+    },
+    {
+        "cmd": "receive-switch-off",
+        "type": 0,
+        "description": "SCU#50",
+        "endpoint": 50,
+        "check-rules": [],
+        "actions": [
+            {
+                "cmd": "level-move-to",
+                "mac-addr": "d0:14:11:b0:01:2a",
+                "endpoint": 4,
+                "level": 0,
+                "duration": 50,
+                "timeout-ms": 1000,
+                "delay-ms": 0
+            }
+        ]
+    },
+    {
+        "cmd": "receive-switch-off",
+        "type": 0,
+        "description": "SCU#85",
+        "endpoint": 85,
+        "check-rules": [],
+        "actions": [
+            {
+                "cmd": "level-move-to",
+                "mac-addr": "d0:14:11:b0:02:58",
+                "endpoint": 1,
+                "level": 0,
+                "duration": 50,
+                "timeout-ms": 1000,
+                "delay-ms": 0
+            }
+        ]
+    },
+    {
+        "cmd": "receive-switch-off",
+        "type": 0,
+        "description": "SCU#86",
+        "endpoint": 86,
+        "check-rules": [],
+        "actions": [
+            {
+                "cmd": "level-move-to",
+                "mac-addr": "d0:14:11:b0:02:66",
+                "endpoint": 2,
+                "level": 0,
+                "duration": 50,
+                "timeout-ms": 1000,
+                "delay-ms": 0
+            }
+        ]
+    },
+    {
+        "cmd": "switch-off",
+        "type": 0,
+        "description": "SCU#1",
+        "endpoint": 1,
+        "check-rules": [],
+        "actions": [
+            {
+                "cmd": "level-move-to",
+                "mac-addr": "d0:14:11:b0:02:1f",
+                "endpoint": 4,
+                "level": 0,
+                "duration": 50,
+                "timeout-ms": 1000,
+                "delay-ms": 0
+            }
+        ]
+    },
+    {
+        "cmd": "switch-off",
+        "type": 0,
+        "description": "SCU#2",
+        "endpoint": 2,
+        "check-rules": [],
+        "actions": [
+            {
+                "cmd": "level-move-to",
+                "mac-addr": "d0:14:11:b0:02:1f",
+                "endpoint": 2,
+                "level": 0,
+                "duration": 50,
+                "timeout-ms": 1000,
+                "delay-ms": 0
+            }
+        ]
+    },
+    {
+        "cmd": "switch-off",
+        "type": 0,
+        "description": "SCU#3",
+        "endpoint": 3,
+        "check-rules": [],
+        "actions": [
+            {
+                "cmd": "level-move-to",
+                "mac-addr": "d0:14:11:b0:02:1f",
+                "endpoint": 1,
+                "level": 0,
+                "duration": 50,
+                "timeout-ms": 1000,
+                "delay-ms": 0
+            }
+        ]
+    },
+    {
+        "cmd": "switch-off",
+        "type": 0,
+        "description": "SCU#13",
+        "endpoint": 13,
+        "check-rules": [],
+        "actions": [
+            {
+                "cmd": "level-move-to",
+                "mac-addr": "d0:14:11:b0:01:24",
+                "endpoint": 2,
+                "level": 0,
+                "duration": 50,
+                "timeout-ms": 1000,
+                "delay-ms": 0
+            }
+        ]
+    },
+    {
+        "cmd": "switch-off",
+        "type": 0,
+        "description": "SCU#14",
+        "endpoint": 14,
+        "check-rules": [],
+        "actions": [
+            {
+                "cmd": "level-move-to",
+                "mac-addr": "d0:14:11:b0:01:24",
+                "endpoint": 4,
+                "level": 0,
+                "duration": 50,
+                "timeout-ms": 1000,
+                "delay-ms": 0
+            }
+        ]
+    },
+    {
+        "cmd": "switch-off",
+        "type": 0,
+        "description": "SCU#19",
+        "endpoint": 19,
+        "check-rules": [],
+        "actions": [
+            {
+                "cmd": "level-move-to",
+                "mac-addr": "d0:14:11:b0:02:66",
+                "endpoint": 4,
+                "level": 0,
+                "duration": 50,
+                "timeout-ms": 1000,
+                "delay-ms": 0
+            }
+        ]
+    },
+    {
+        "cmd": "switch-off",
+        "type": 0,
+        "description": "SCU#20",
+        "endpoint": 20,
+        "check-rules": [],
+        "actions": [
+            {
+                "cmd": "level-move-to",
+                "mac-addr": "d0:14:11:b0:02:66",
+                "endpoint": 3,
+                "level": 0,
+                "duration": 50,
+                "timeout-ms": 1000,
+                "delay-ms": 0
+            }
+        ]
+    },
+    {
+        "cmd": "switch-off",
+        "type": 0,
+        "description": "SCU#25",
+        "endpoint": 25,
+        "check-rules": [],
+        "actions": [
+            {
+                "cmd": "level-move-to",
+                "mac-addr": "d0:14:11:b0:01:2a",
+                "endpoint": 1,
+                "level": 0,
+                "duration": 50,
+                "timeout-ms": 1000,
+                "delay-ms": 0
+            }
+        ]
+    },
+    {
+        "cmd": "switch-off",
+        "type": 0,
+        "description": "SCU#26",
+        "endpoint": 26,
+        "check-rules": [],
+        "actions": [
+            {
+                "cmd": "level-move-to",
+                "mac-addr": "d0:14:11:b0:01:2a",
+                "endpoint": 2,
+                "level": 0,
+                "duration": 50,
+                "timeout-ms": 1000,
+                "delay-ms": 0
+            }
+        ]
+    },
+    {
+        "cmd": "switch-off",
+        "type": 0,
+        "description": "SCU#27",
+        "endpoint": 27,
+        "check-rules": [],
+        "actions": [
+            {
+                "cmd": "level-move-to",
+                "mac-addr": "d0:14:11:b0:01:2a",
+                "endpoint": 4,
+                "level": 0,
+                "duration": 50,
+                "timeout-ms": 1000,
+                "delay-ms": 0
+            }
+        ]
+    },
+    {
+        "cmd": "switch-off",
+        "type": 0,
+        "description": "SCU#31",
+        "endpoint": 31,
+        "check-rules": [],
+        "actions": [
+            {
+                "cmd": "level-move-to",
+                "mac-addr": "d0:14:11:b0:02:66",
+                "endpoint": 1,
+                "level": 0,
+                "duration": 50,
+                "timeout-ms": 1000,
+                "delay-ms": 0
+            }
+        ]
+    },
+    {
+        "cmd": "switch-off",
+        "type": 0,
+        "description": "SCU#32",
+        "endpoint": 32,
+        "check-rules": [],
+        "actions": [
+            {
+                "cmd": "level-move-to",
+                "mac-addr": "d0:14:11:b0:01:2a",
+                "endpoint": 3,
+                "level": 0,
+                "duration": 50,
+                "timeout-ms": 1000,
+                "delay-ms": 0
+            }
+        ]
+    },
+    {
+        "cmd": "switch-off",
+        "type": 0,
+        "description": "SCU#37",
+        "endpoint": 37,
+        "check-rules": [],
+        "actions": [
+            {
+                "cmd": "level-move-to",
+                "mac-addr": "d0:14:11:b0:03:0b",
+                "endpoint": 1,
+                "level": 0,
+                "duration": 50,
+                "timeout-ms": 1000,
+                "delay-ms": 0
+            }
+        ]
+    },
+    {
+        "cmd": "switch-off",
+        "type": 0,
+        "description": "SCU#38",
+        "endpoint": 38,
+        "check-rules": [],
+        "actions": [
+            {
+                "cmd": "level-move-to",
+                "mac-addr": "d0:14:11:b0:02:66",
+                "endpoint": 1,
+                "level": 0,
+                "duration": 50,
+                "timeout-ms": 1000,
+                "delay-ms": 0
+            }
+        ]
+    },
+    {
+        "cmd": "switch-off",
+        "type": 0,
+        "description": "SCU#43",
+        "endpoint": 43,
+        "check-rules": [],
+        "actions": [
+            {
+                "cmd": "level-move-to",
+                "mac-addr": "d0:14:11:b0:01:24",
+                "endpoint": 1,
+                "level": 0,
+                "duration": 50,
+                "timeout-ms": 1000,
+                "delay-ms": 0
+            }
+        ]
+    },
+    {
+        "cmd": "switch-off",
+        "type": 0,
+        "description": "SCU#44",
+        "endpoint": 44,
+        "check-rules": [],
+        "actions": [
+            {
+                "cmd": "level-move-to",
+                "mac-addr": "d0:14:11:b0:01:24",
+                "endpoint": 3,
+                "level": 0,
+                "duration": 50,
+                "timeout-ms": 1000,
+                "delay-ms": 0
+            }
+        ]
+    },
+    {
+        "cmd": "switch-off",
+        "type": 0,
+        "description": "SCU#49",
+        "endpoint": 49,
+        "check-rules": [],
+        "actions": [
+            {
+                "cmd": "level-move-to",
+                "mac-addr": "d0:14:11:b0:02:1f",
+                "endpoint": 3,
+                "level": 0,
+                "duration": 50,
+                "timeout-ms": 1000,
+                "delay-ms": 0
+            }
+        ]
+    },
+    {
+        "cmd": "switch-off",
+        "type": 0,
+        "description": "SCU#50",
+        "endpoint": 50,
+        "check-rules": [],
+        "actions": [
+            {
+                "cmd": "level-move-to",
+                "mac-addr": "d0:14:11:b0:01:2a",
+                "endpoint": 4,
+                "level": 0,
+                "duration": 50,
+                "timeout-ms": 1000,
+                "delay-ms": 0
+            }
+        ]
+    },
+    {
+        "cmd": "switch-off",
+        "type": 0,
+        "description": "SCU#85",
+        "endpoint": 85,
+        "check-rules": [],
+        "actions": [
+            {
+                "cmd": "level-move-to",
+                "mac-addr": "d0:14:11:b0:02:58",
+                "endpoint": 1,
+                "level": 0,
+                "duration": 50,
+                "timeout-ms": 1000,
+                "delay-ms": 0
+            }
+        ]
+    },
+    {
+        "cmd": "switch-off",
+        "type": 0,
+        "description": "SCU#86",
+        "endpoint": 86,
+        "check-rules": [],
+        "actions": [
+            {
+                "cmd": "level-move-to",
+                "mac-addr": "d0:14:11:b0:02:66",
+                "endpoint": 2,
+                "level": 0,
+                "duration": 50,
+                "timeout-ms": 1000,
+                "delay-ms": 0
+            }
+        ]
+    }
+]

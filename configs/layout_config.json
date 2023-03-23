@@ -1,0 +1,34 @@
+{
+    "Device Layout": {
+        "SCU": {
+            "rows": 2,
+            "cols": 8,
+            "btn_rows": 2,
+            "btn_cols": 3
+        },
+        "SCULite": {
+            "rows": 2,
+            "cols": 2,
+            "btn_rows": 2,
+            "btn_cols": 3
+        },
+        "Dimmer": {
+            "rows": 1,
+            "cols": 1,
+            "btn_rows": 1,
+            "btn_cols": 4
+        },
+        "POC": {
+            "rows": 1,
+            "cols": 1,
+            "btn_rows": 1,
+            "btn_cols": 8
+        },
+        "Smart Switch": {
+            "rows": 1,
+            "cols": 1,
+            "btn_rows": 1,
+            "btn_cols": 8
+        }
+    }
+}

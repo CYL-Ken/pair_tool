@@ -1,0 +1,18 @@
+[
+    {
+        "cmd": "identify-self",
+        "type": 0,
+        "description": "0",
+        "endpoint": 2,
+        "check-rules": [],
+        "actions": []
+    },
+    {
+        "cmd": "reset-device",
+        "type": 0,
+        "description": "0",
+        "endpoint": 2,
+        "check-rules": [],
+        "actions": []
+    }
+]
