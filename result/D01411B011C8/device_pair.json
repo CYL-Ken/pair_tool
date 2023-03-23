@@ -1,0 +1,33 @@
+[
+    {
+        "cmd": "switch-on",
+        "type": 0,
+        "description": "0",
+        "endpoint": 9,
+        "check-rules": [],
+        "actions": [
+            {
+                "cmd": "switch-on",
+                "mac-addr": "d0:14:11:b0:11:xd",
+                "endpoint": 1,
+                "level": 3
+            }
+        ]
+    },
+    {
+        "cmd": "switch-on",
+        "type": 0,
+        "description": "0",
+        "endpoint": 7,
+        "check-rules": [],
+        "actions": [
+            {
+                "cmd": "switch-on",
+                "mac-addr": "d0:14:11:b0:11:ca",
+                "endpoint": 1,
+                "level": 332,
+                "duration": 3
+            }
+        ]
+    }
+]

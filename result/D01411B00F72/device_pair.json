@@ -1,0 +1,33 @@
+[
+    {
+        "cmd": "identify-self",
+        "type": 0,
+        "description": "0",
+        "endpoint": 3,
+        "check-rules": [],
+        "actions": [
+            {
+                "cmd": "identify-self",
+                "mac-addr": "d0:14:11:b0:10:7b",
+                "endpoint": 15,
+                "level": 435
+            }
+        ]
+    },
+    {
+        "cmd": "switch-off",
+        "type": 0,
+        "description": "0",
+        "endpoint": 23,
+        "check-rules": [],
+        "actions": [
+            {
+                "cmd": "identify-self",
+                "mac-addr": "d0:14:11:b0:10:7b",
+                "endpoint": 76,
+                "level": 3456,
+                "duration": 346
+            }
+        ]
+    }
+]
