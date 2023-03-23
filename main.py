@@ -1,18 +1,25 @@
-import json, time
+import sys
+import json
+import argparse
 from PyQt5 import QtWidgets, QtGui, QtCore
+from PyQt5.QtCore import QThread, pyqtSignal
 from PyQt5.QtWidgets import QLabel, QPushButton, QGroupBox, QWidget, QGridLayout, QVBoxLayout, QScrollArea, QHBoxLayout
 
 from layout.main_ui import Ui_MainWindow
 from layout.pairwindow_ui import Ui_PairWindow
 from pair_dataset import PairDataset
 from network_scanner import NetworkScanner
-
+from core import cyl_util as util
+from core.cyl_telnet import CYLTelnet
 
 """
     - MainWindow: The homepage of this application
     - PairWindow: For user type command detail
     - PopUpWindow: For displaying any message
 """
+
+SUPPORT_DEVICE = ["SCU", "SCULite", "Dimmer", "POC", "Smart Switch"]
+DEVICE_CONFIG = ""
 
 class MainWindow(QtWidgets.QMainWindow):
     def __init__(self):
@@ -24,6 +31,14 @@ class MainWindow(QtWidgets.QMainWindow):
         self.pair_window = PairWindow()
         
         self.network_scanner = NetworkScanner()
+        
+        self.process_thread = ProcessThread()
+        self.process_thread.finish_update.connect(self.update_devices_ui)
+        self.process_thread.show_message.connect(self.pop_window)
+        
+        self.device_list = []
+        self.default_data = {}
+        self.iot_devices = {}
         
         # Different device's button layout
         with open("configs/layout_config.json") as f:
@@ -46,15 +61,60 @@ class MainWindow(QtWidgets.QMainWindow):
 
     def setup_control(self):
         self.ui.output.clicked.connect(self.output_to_json)
-        self.ui.refresh_button.clicked.connect(self.update_connected_devices)
+        self.ui.refresh_button.clicked.connect(self.start_update)
         self.ui.comboBox.currentTextChanged.connect(self.update_device)
         self.ui.comboBox_2.currentTextChanged.connect(self.update_target)
 
         # First Update btns in two group 
         self.launch = True
-        self.update_connected_devices()
+        self.start_update()
+
+
+    def update_devices_ui(self, ret, device_data, device_list):
+        self.pop_up_window.close_window()
+        if ret:
+            self.device_list = device_list
+            self.default_data = device_data
+            
+            self.ui.comboBox.blockSignals(True)
+            self.ui.comboBox.clear()
+            self.ui.comboBox_2.blockSignals(True)
+            self.ui.comboBox_2.clear()
+            
+            if len(self.device_list) > 0:
+                self.ui.comboBox.addItems(self.device_list)
+                self.ui.comboBox_2.addItems(self.device_list)
+            
+                self.ui.comboBox.blockSignals(False)
+                self.ui.comboBox_2.blockSignals(False)
+                self.update_device()
+                self.update_target()
+            else:
+                pass
+            
+        else:
+            if self.ui.device_button_group.layout():
+                QWidget().setLayout(self.ui.device_button_group.layout())
+            if self.ui.target_button_group.layout():
+                QWidget().setLayout(self.ui.target_button_group.layout())
+            self.ui.device_title.setText("")
+            self.ui.target_title.setText("")
+        self.pop_up_window.show_message(title="提示", message="設備列表更新完成!")
+
+
+    def start_update(self):
+        # self.pop_up_window.show_message(title="提示", message="設備列表更新中...", show_button=False)
+        print("Start")
+        self.process_thread.start()
         
+        
+    def pop_window(self):
+        self.pop_up_window.show_message(title="提示", message="設備列表更新中...", show_button=False)
+        self.setDisabled(True)
+        pass
+
     def update_connected_devices(self):
+        # self.pop_up_window.show_message(title="提示", message="設備列表更新中...", show_button=False)
         ret = self.get_device_and_info()
         if ret:
             self.update_device()
@@ -67,10 +127,13 @@ class MainWindow(QtWidgets.QMainWindow):
             self.ui.device_title.setText("")
             self.ui.target_title.setText("")
         
+        
+        # self.pop_up_window.close_window()
+        
         if self.launch is True:
             self.launch = False
         else:
-            self.pop_up_window.show_update_message()
+            self.pop_up_window.show_message(title="提示", message="設備列表更新完成!")
 
 
     def get_device_and_info(self):
@@ -84,13 +147,19 @@ class MainWindow(QtWidgets.QMainWindow):
         self.ui.comboBox_2.clear()
         
         self.iot_devices = self.network_scanner.get_iot_devices()
-        self.device_list = self.iot_devices.values()
+        # self.device_list = self.iot_devices.values()
         
-        with open("configs/virtual.json") as f:
-            default_data = json.load(f)
-            self.default_data = default_data
-            # self.device_list = default_data.keys()
-            f.close()
+        # with open("configs/virtual.json") as f:
+        #     default_data = json.load(f)
+        #     self.default_data = default_data
+        #     f.close()
+        
+        for ip, mac in self.iot_devices.items():
+            result = self.enumerate_from_device(ip=ip, mac=mac)
+            if result != False:
+                self.default_data[mac] = result
+                self.device_list.append(mac)
+            
         
         if len(self.device_list) > 0:
             self.ui.comboBox.addItems(self.device_list)
@@ -102,6 +171,39 @@ class MainWindow(QtWidgets.QMainWindow):
             return True
         else:
             return False
+        
+    def enumerate_from_device(self, ip="", mac=""):
+        my_dict = {}
+        my_endpoint = {}
+
+        conn = CYLTelnet(ip, 9528)
+        target_id = util.make_target_id(mac, 1)
+        command = util.make_cmd("enumerate", target_id=target_id)
+
+        ret, out = conn.sends(command, read_until=True, verbose=False, expect_string=':#', timeout=15)
+        if ret is False:
+            print("Enumerate Failed")
+            print(out)
+            return False 
+
+        for channel in out["devices"]:
+            device_type = [d for d in SUPPORT_DEVICE if d in channel["name"]][0]
+            endpoint = channel["id"].split(":")[-1]
+            support_cmd = channel["commands"]
+            my_endpoint[endpoint] = support_cmd
+
+        if endpoint == "24":
+            device_type = "SCULite"
+        my_dict["type"] = device_type
+        my_dict["channels"] = my_endpoint
+
+        return my_dict
+
+
+    def refresh_devices(self):
+        self.pop_up_window.show_message(title="提示", message="設備列表更新中...", show_button=False)
+        
+
 
     def update_device(self):
         self.device_mac = self.ui.comboBox.currentText()
@@ -156,7 +258,7 @@ class MainWindow(QtWidgets.QMainWindow):
                     self.target_button[i].set_btn_status(False)
         except Exception as e:
             self.release_btns()
-            self.pop_up_window.show_warning_message()
+            self.pop_up_window.show_message(title="警告", message="找不到Command!")
             print(e)
 
 
@@ -295,16 +397,57 @@ class PairWindow(QtWidgets.QWidget):
                                 if key != "endpoint" and key != "mac-addr" and key != "cmd":
                                     output_str += f", {key}:{value}"
                             text = f"{cmd} -> {action['cmd']}{output_str}"
-                            object = QLabel("TextLabel")
-                            object.setText(text)
-                            object.setFont(font)
-                            layout.addWidget(object)
+                            
+                            command_space = QGridLayout()
+                            delete_button = DeleteButton()
+                            
+                            delete_button.set_info(source_mac=self.source_mac, 
+                                                    source_cmd=cmd, 
+                                                    source_endpoint=self.source_endpoint, 
+                                                    action=action)
+                            
+                            
+                            command_text = QLabel("TextLabel")
+                            command_text.setText(text)
+                            command_text.setFont(font)
+                            
+                            command_space.addWidget(delete_button, 0, 0)
+                            command_space.addWidget(command_text, 0, 1)
+                            
+                            layout.addLayout(command_space)
 
         widget.setLayout(layout)
         scroll_area.setWidget(widget)
         
         h_layout.addWidget(scroll_area)
         self.ui.cmd_group.setLayout(h_layout)
+        
+    
+    def remove_action(self, source_mac="", source_cmd="", source_endpoint="", action={}):
+        
+        try:
+            pair_list = pair_dataset.current_dataset.get(source_mac)
+            print(pair_list)
+            for pair in pair_list:
+                print(source_cmd)
+                print(source_endpoint)
+                if pair["cmd"] == source_cmd and pair["endpoint"] == int(source_endpoint):
+                    print(action)
+                    
+                    actions = pair["actions"]
+                    index = actions.index(action)
+                    del actions[index]
+                    
+                    if len(actions) == 0:
+                        i = pair_list.index(pair)
+                        del pair_list[i]
+            
+            
+            self.add_exist_pair()
+            print(pair_list)
+            
+        except Exception as e:
+            print(e)
 
 
     def init_cmd(self, source_command_list=[], target_command_list=[]):
@@ -398,13 +541,39 @@ class PopUpWindow(QtWidgets.QWidget):
         self.button.clicked.connect(self.close)
         
         self.setWindowTitle("提示訊息")
+        
+    
+    def show_message(self, title="", message="", show_button=True):
+        self.msg.setText(message)
+        self.setWindowTitle(title)
+        self.button.setVisible(show_button)
+        if show_button:
+            self.button.clicked.connect(self.back_to_window)
+        self.show()
+
+    def back_to_window(self):
+        window.setDisabled(False)
+        self.close_window()
+
+    def close_window(self):
+        self.msg.clear()
+        self.close()
 
     def show_warning_message(self, message=""):
         self.msg.setText("沒有Command.................")
         self.show()
         
+    def show_processing_message(self, message=""):
+        self.msg.setText(message)
+        self.button.setVisible(False)
+        self.show()
+        
+    def close_window(self):
+        self.close()
+        
     def show_update_message(self, message=""):
         self.msg.setText("設備列表更新完成!")
+        self.button.setVisible(True)
         self.show()
 
     def show_output_json_message(self, result, message=""):
@@ -417,6 +586,7 @@ class PopUpWindow(QtWidgets.QWidget):
 
     def closeEvent(self, event):
         self.msg.clear()
+        
         event.accept()
 
 
@@ -497,22 +667,8 @@ class CustomButton(QPushButton):
                 }}
             ''')
         else:
-            self.setStyleSheet(f'''
-            QPushButton {{
-                border: 1.5px solid #332C39;
-                border-radius: 7px;
-                padding: 5px 1px;
-                font-size: 20px;
-                font-weight: bold;
-                font-family: Consolas;
-                background-color: #{self.bg_color};
-            }}
-            QPushButton:hover {{
-                border: 1.5px solid #95BDFF;
-                background-color: #{self.hover_bg_color};
-                color: #{self.hover_color};
-            }}
-        ''')
+            self.setup_button()
+
 
     def enterEvent(self, event):
         self.target_channels = list()
@@ -538,19 +694,102 @@ class CustomButton(QPushButton):
         window.show_pair_connection(self.mac, self.channel_number, self.space, self.target_channels, is_pair=False)
     
     
-    def make_style(self, status="normal"):
-        if status == "normal":
-            style_sheet = f'''
+class DeleteButton(QPushButton):
+    def __init__(self):
+        super().__init__()
+        self.setText("X")
+        self.setFixedSize(30, 30)
+        self.setStyleSheet('''
+            QPushButton {
+                
+            }
+            QPushButton:hover {
+                
+            }
+        ''')
+        self.clicked.connect(self.delete_action)
+        
+        
+    def set_info(self, source_mac="", source_cmd="", source_endpoint="", action={}):
+        self.source_mac = source_mac
+        self.source_cmd = source_cmd
+        self.source_endpoint = source_endpoint
+        self.action = action
+        
+    def delete_action(self):
+        window.pair_window.remove_action(source_mac=self.source_mac, 
+                                        source_cmd=self.source_cmd, 
+                                        source_endpoint=self.source_endpoint, 
+                                        action=self.action)
+        pass
+    
+class ProcessThread(QThread):
+    finish_update = pyqtSignal(bool, dict, list)
+    show_message = pyqtSignal()
+    
+    def __init__(self, ) -> None:
+        super(ProcessThread, self).__init__()
+        self.start_update = pyqtSignal(bool)
+        
+    def run(self):
+        self.show_message.emit()
+        self.update_devices()
+        
+    def update_devices(self):
+        self.device_data = {}
+        self.device_list = []
+        
+        self.network_scanner = NetworkScanner()
+        self.iot_devices = self.network_scanner.get_iot_devices()
+        
+        for ip, mac in self.iot_devices.items():
+            result = self.enumerate_from_device(ip=ip, mac=mac)
+            if result != False:
+                self.device_data[mac] = result
+                self.device_list.append(mac)
+        
+        
+        ret = True if len(self.device_list) > 0 else False
+        self.finish_update.emit(ret, self.device_data, self.device_list)
+    
+    def enumerate_from_device(self, ip="", mac=""):
+        my_dict = {}
+        my_endpoint = {}
 
-            '''
-        elif status == "highlight":
-            style_sheet = f'''
+        conn = CYLTelnet(ip, 9528)
+        target_id = util.make_target_id(mac, 1)
+        command = util.make_cmd("enumerate", target_id=target_id)
 
-            '''
-        return style_sheet
+        ret, out = conn.sends(command, read_until=True, verbose=False, expect_string=':#', timeout=15)
+        if ret is False:
+            print("Enumerate Failed")
+            print(out)
+            return False 
+
+        for channel in out["devices"]:
+            device_type = [d for d in SUPPORT_DEVICE if d in channel["name"]][0]
+            endpoint = channel["id"].split(":")[-1]
+            support_cmd = channel["commands"]
+            my_endpoint[endpoint] = support_cmd
+
+        if endpoint == "24":
+            device_type = "SCULite"
+        my_dict["type"] = device_type
+        my_dict["channels"] = my_endpoint
+        
+        return my_dict
+
 
 if __name__ == '__main__':
-    import sys
+    parser = argparse.ArgumentParser(description="配對工具")
+    parser.add_argument("-d", "--debug", help="debug mode")
+    parser.add_argument("-f", "--file", help="file mode path")
+    
+    args = parser.parse_args()
+    DEVICE_CONFIG = args.file
+    
+    
+    
     app = QtWidgets.QApplication(sys.argv)
     
     pair_dataset = PairDataset()

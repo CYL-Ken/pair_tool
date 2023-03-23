@@ -432,20 +432,37 @@ background-color: #E9D5DA;</string>
    <widget class="QPushButton" name="refresh_button">
     <property name="geometry">
      <rect>
-      <x>1180</x>
+      <x>1099</x>
       <y>660</y>
-      <width>50</width>
+      <width>130</width>
       <height>50</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <family>Microsoft YaHei</family>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
     <property name="styleSheet">
-     <string notr="true">QPushButton {
-	image: url(&quot;resource/refresh.png&quot;);
-	border:none;
-}</string>
+     <string notr="true">
+QPushButton#refresh_button {
+    background-color: #3F72AF;
+    color: #F9F7F7;
+    border-radius: 5px;
+    border: none;
+}
+
+QPushButton#refresh_button:hover {
+    background-color: #F9F7F7;
+    color: #3F72AF;
+    border-radius: 5px;
+    border: 2px solid #3F72AF;
+}
+</string>
     </property>
     <property name="text">
-     <string/>
+     <string>重新整理</string>
     </property>
    </widget>
   </widget>

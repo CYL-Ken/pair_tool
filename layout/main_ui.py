@@ -209,12 +209,26 @@ class Ui_MainWindow(object):
         self.label_6.setText("")
         self.label_6.setObjectName("label_6")
         self.refresh_button = QtWidgets.QPushButton(self.centralwidget)
-        self.refresh_button.setGeometry(QtCore.QRect(1180, 660, 50, 50))
-        self.refresh_button.setStyleSheet("QPushButton {\n"
-"    image: url(\"resource/refresh.png\");\n"
-"    border:none;\n"
-"}")
-        self.refresh_button.setText("")
+        self.refresh_button.setGeometry(QtCore.QRect(1099, 660, 130, 50))
+        font = QtGui.QFont()
+        font.setFamily("Microsoft YaHei")
+        font.setPointSize(16)
+        self.refresh_button.setFont(font)
+        self.refresh_button.setStyleSheet("\n"
+"QPushButton#refresh_button {\n"
+"    background-color: #3F72AF;\n"
+"    color: #F9F7F7;\n"
+"    border-radius: 5px;\n"
+"    border: none;\n"
+"}\n"
+"\n"
+"QPushButton#refresh_button:hover {\n"
+"    background-color: #F9F7F7;\n"
+"    color: #3F72AF;\n"
+"    border-radius: 5px;\n"
+"    border: 2px solid #3F72AF;\n"
+"}\n"
+"")
         self.refresh_button.setObjectName("refresh_button")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
@@ -237,6 +251,7 @@ class Ui_MainWindow(object):
         self.label.setText(_translate("MainWindow", "Input"))
         self.label_2.setText(_translate("MainWindow", "Output"))
         self.label_3.setText(_translate("MainWindow", "Normal"))
+        self.refresh_button.setText(_translate("MainWindow", "重新整理"))
 
 
 if __name__ == "__main__":

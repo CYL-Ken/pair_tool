@@ -1,69 +1,42 @@
-dataset = {
-    "d0:14:11:b0:11:c8": [
-        {
-            "cmd": "switch-on",
-            "type": 0,
-            "description": "0",
-            "endpoint": 1,
-            "check-rules": [],
-            "actions": [
-                {
-                    "cmd": "switch-on",
-                    "mac-addr": "d0:14:11:b0:11:c8",
-                    "endpoint": 4,
-                    "level": 255,
-                    "duration": 50,
-                    "timeout-ms": 1000
-                },
-                {
-                    "cmd": "switch-on",
-                    "mac-addr": "d0:14:11:b0:11:c8",
-                    "endpoint": 5,
-                    "level": 255,
-                    "duration": 50,
-                    "timeout-ms": 1000
-                },
-                {
-                    "cmd": "switch-on",
-                    "mac-addr": "d0:14:11:b0:11:c8",
-                    "endpoint": 6,
-                    "level": 255,
-                    "duration": 50,
-                    "timeout-ms": 1000
-                }
-            ]
-        },
-        {
-            "cmd": "switch-off",
-            "type": 0,
-            "description": "0",
-            "endpoint": 1,
-            "check-rules": [],
-            "actions": [
-                {
-                    "cmd": "switch-on",
-                    "mac-addr": "d0:14:11:b0:11:c8",
-                    "endpoint": 8,
-                    "level": 255,
-                    "duration": 50,
-                    "timeout-ms": 1000
-                }
-            ]
-        }
-    ]
-}
+import json
 
+from core import cyl_util as util
+from core.cyl_telnet import CYLTelnet
 
+SUPPORT_DEVICE = ["SCU", "SCULite", "Dimmer", "POC", "Smart Switch"]
 
-channel_number = 1
-target_channels = list()
+device_mac = "d0:14:11:b0:0f:75"
+device_ip = "172.16.50.4"
+# device_ip = ""
 
-data = dataset.get("d0:14:11:b0:11:c8")
-for i in data:
-    if i["endpoint"] == channel_number:
-        target_actions = i["actions"]
-        for target in target_actions:
-            target_channels.append((target["endpoint"], target["mac-addr"]))
+def enumerate_from_device(ip="", mac=""):
+    my_dict = {}
+    my_endpoint = {}
 
-print(channel_number)
-print(target_channels)
+    conn = CYLTelnet(ip, 9528)
+    target_id = util.make_target_id(mac, 1)
+    command = util.make_cmd("enumerate", target_id=target_id)
+
+    ret, out = conn.sends(command, read_until=True, verbose=False, expect_string=':#', timeout=10)
+    if ret is False:
+        print("Enumerate Failed")
+        print(out)
+        return False 
+
+    for channel in out["devices"]:
+        device_type = [d for d in SUPPORT_DEVICE if d in channel["name"]][0]
+        endpoint = channel["id"].split(":")[-1]
+        support_cmd = channel["commands"]
+        my_endpoint[endpoint] = support_cmd
+
+    if endpoint == "24":
+        device_type = "SCULite"
+    my_dict["type"] = device_type
+    my_dict["channels"] = my_endpoint
+
+    return my_dict
+
+if __name__ == "__main__":
+    a = {}        
+    a[device_mac] = enumerate_from_device(device_ip, device_mac)
+    print(a)

@@ -38,7 +38,7 @@
         }
     },
     "d0:14:11:b0:11:ca": {
-        "type": "SmartSwitch",
+        "type": "Smart Switch",
         "cmd": ["receive-switch-on", "receive-switch-off", "test"],
         "channels": {
             "1": ["switch-on"],
@@ -53,7 +53,7 @@
         }
     },
     "d0:14:11:b0:11:xd": {
-        "type": "SmartSwitch",
+        "type": "Smart Switch",
         "cmd": ["receive-switch-on", "receive-switch-off", "test"],
         "channels": {
             "1": ["switch-on"],
