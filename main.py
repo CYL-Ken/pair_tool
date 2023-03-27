@@ -747,7 +747,7 @@ class DeleteButton(QPushButton):
     def __init__(self):
         super().__init__()
         # self.setText("-")
-        self.setFixedSize(30, 30)
+        self.setFixedSize(18, 18)
         self.setStyleSheet('''
             QPushButton {
                 border: 0px;

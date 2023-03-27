@@ -11,7 +11,7 @@ class SwitchButton(QtWidgets.QWidget):
         self.bgColorOff = QColor("#DBE2EF")
         self.bgColorOn = QColor("#DBE2EF")
 
-        self.sliderColorOff = QColor("#F9F7F7")
+        self.sliderColorOff = QColor("#C9CCD5")
         self.sliderColorOn = QColor("#3F72AF")
 
         self.textColorOff = QColor("#112D4E")
