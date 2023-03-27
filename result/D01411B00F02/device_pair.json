@@ -1,0 +1,17 @@
+[
+    {
+        "cmd": "identify-self",
+        "type": 0,
+        "description": "0",
+        "endpoint": 4,
+        "check-rules": [],
+        "actions": [
+            {
+                "cmd": "identify-self",
+                "mac-addr": "d0:14:11:b0:0f:01",
+                "endpoint": 1,
+                "level": 5
+            }
+        ]
+    }
+]

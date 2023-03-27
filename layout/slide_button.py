@@ -1,14 +1,11 @@
-import sys
+from PyQt5 import QtWidgets
+from PyQt5.QtCore import pyqtSignal, QTimer, QRect, QRectF, Qt
+from PyQt5.QtGui import QColor, QFont, QPainter, QPainterPath, QPen
 
-from PyQt5.QtCore import *
-from PyQt5.QtGui import *
-from PyQt5.QtWidgets import *
-
-class SwitchBtn(QWidget):
-    #信号
+class SwitchButton(QtWidgets.QWidget):
     checkedChanged = pyqtSignal(bool)
     def __init__(self,parent=None):
-        super(QWidget, self).__init__(parent)
+        super(QtWidgets.QWidget, self).__init__(parent)
 
         self.checked = False
         self.bgColorOff = QColor("#DBE2EF")
@@ -30,19 +27,16 @@ class SwitchBtn(QWidget):
         self.startX = 0
         self.endX = 0
 
-        self.timer = QTimer(self)  # 初始化一个定时器
-        self.timer.timeout.connect(self.updateValue)  # 计时结束调用operate()方法
-
-        #self.timer.start(5)  # 设置计时间隔并启动
+        self.timer = QTimer(self)
+        self.timer.timeout.connect(self.updateValue)
 
         self.setFont(QFont("Microsoft Yahei", 10))
-
-        #self.resize(55,22)
         
-    def init_btn(self):
+        
+    def init_button(self):
         self.checked = True
         self.startX = (self.width() - self.height())
-        pass
+
 
     def updateValue(self):
         if self.checked:
@@ -63,34 +57,28 @@ class SwitchBtn(QWidget):
 
     def mousePressEvent(self,event):
         self.checked = not self.checked
-        #发射信号
         self.checkedChanged.emit(self.checked)
 
-        # 每次移动的步长为宽度的50分之一
         self.step = self.width() // 50
-        #状态切换改变后自动计算终点坐标
+    
         if self.checked:
             self.endX = self.width() - self.height()
         else:
             self.endX = 0
         self.timer.start(5)
 
-    def paintEvent(self, evt):
-        #绘制准备工作, 启用反锯齿
+    def paintEvent(self, evt): 
         painter = QPainter()
-
-
 
         painter.begin(self)
 
         painter.setRenderHint(QPainter.Antialiasing)
 
 
-        #绘制背景
         self.drawBg(evt, painter)
-        #绘制滑块
+        
         self.drawSlider(evt, painter)
-        #绘制文字
+        
         self.drawText(evt, painter)
 
         painter.end()
@@ -112,8 +100,6 @@ class SwitchBtn(QWidget):
     def drawBg(self, event, painter):
         painter.save()
         painter.setPen(Qt.NoPen)
-        # pen = QPen(QColor("#DBE2EF"))
-        # painter.setPen(pen)
 
         if self.checked:
             painter.setBrush(self.bgColorOn)
@@ -121,9 +107,9 @@ class SwitchBtn(QWidget):
             painter.setBrush(self.bgColorOff)
 
         rect = QRect(0, 0, self.width(), self.height())
-        #半径为高度的一半
+        
         radius = rect.height() // 2
-        #圆的宽度为高度
+        
         circleWidth = rect.height()
 
         path = QPainterPath()
@@ -136,9 +122,9 @@ class SwitchBtn(QWidget):
         painter.drawPath(path)
         painter.restore()
 
+
     def drawSlider(self, event, painter):
         painter.save()
-        
 
         if self.checked:
             painter.setBrush(self.sliderColorOn)
@@ -151,36 +137,3 @@ class SwitchBtn(QWidget):
         painter.drawEllipse(sliderRect)
 
         painter.restore()
-
-
-
-
-class MainWindow(QMainWindow):
-    def __init__(self,parent=None):
-        super(MainWindow, self).__init__(parent)
-        self.resize(400,200)
-        self.switchBtn = SwitchBtn(self)
-        self.switchBtn.setGeometry(10,10,60,30)
-        self.switchBtn.init_btn()
-        self.switchBtn.checkedChanged.connect(self.getState)
-        self.status = self.statusBar()
-        self.status.showMessage("this is a example", 5000)
-        self.setWindowTitle("PyQt")
-
-    def getState(self,checked):
-        print("checked=", checked)
-
-
-
-
-
-
-
-
-
-if __name__ == "__main__":
-    app = QApplication(sys.argv)
-    form = MainWindow()
-    #form = SwitchBtn()
-    form.show()
-    sys.exit(app.exec_())

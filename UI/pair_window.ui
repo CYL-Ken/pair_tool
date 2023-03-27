@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>640</width>
-    <height>609</height>
+    <height>669</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -30,9 +30,9 @@ QLabel#target_channel {
   <widget class="QPushButton" name="confirm">
    <property name="geometry">
     <rect>
-     <x>260</x>
-     <y>530</y>
-     <width>120</width>
+     <x>220</x>
+     <y>560</y>
+     <width>200</width>
      <height>50</height>
     </rect>
    </property>
@@ -71,8 +71,8 @@ QPushButton#confirm:hover {
     <rect>
      <x>400</x>
      <y>10</y>
-     <width>171</width>
-     <height>91</height>
+     <width>170</width>
+     <height>80</height>
     </rect>
    </property>
    <property name="title">
@@ -81,9 +81,9 @@ QPushButton#confirm:hover {
    <widget class="QLabel" name="target_channel">
     <property name="geometry">
      <rect>
-      <x>70</x>
-      <y>40</y>
-      <width>40</width>
+      <x>59</x>
+      <y>30</y>
+      <width>50</width>
       <height>40</height>
      </rect>
     </property>
@@ -110,7 +110,7 @@ QPushButton#confirm:hover {
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>171</width>
+      <width>170</width>
       <height>30</height>
      </rect>
     </property>
@@ -135,8 +135,8 @@ QPushButton#confirm:hover {
     <rect>
      <x>69</x>
      <y>10</y>
-     <width>171</width>
-     <height>90</height>
+     <width>170</width>
+     <height>80</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -148,9 +148,9 @@ QPushButton#confirm:hover {
    <widget class="QLabel" name="source_channel">
     <property name="geometry">
      <rect>
-      <x>70</x>
-      <y>40</y>
-      <width>40</width>
+      <x>60</x>
+      <y>30</y>
+      <width>50</width>
       <height>40</height>
      </rect>
     </property>
@@ -177,7 +177,7 @@ QPushButton#confirm:hover {
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>171</width>
+      <width>170</width>
       <height>30</height>
      </rect>
     </property>
@@ -201,9 +201,9 @@ QPushButton#confirm:hover {
    <property name="geometry">
     <rect>
      <x>20</x>
-     <y>110</y>
+     <y>90</y>
      <width>600</width>
-     <height>150</height>
+     <height>171</height>
     </rect>
    </property>
    <property name="font">
@@ -237,10 +237,10 @@ QScrollArea {
   <widget class="QGroupBox" name="input_group">
    <property name="geometry">
     <rect>
-     <x>69</x>
-     <y>270</y>
-     <width>501</width>
-     <height>241</height>
+     <x>70</x>
+     <y>280</y>
+     <width>500</width>
+     <height>240</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -255,10 +255,10 @@ QScrollArea {
    <widget class="QPushButton" name="add">
     <property name="geometry">
      <rect>
-      <x>110</x>
+      <x>350</x>
       <y>190</y>
-      <width>281</width>
-      <height>41</height>
+      <width>130</width>
+      <height>40</height>
      </rect>
     </property>
     <property name="font">
@@ -288,7 +288,7 @@ QPushButton#add:hover {
 </string>
     </property>
     <property name="text">
-     <string>新增至列表</string>
+     <string>新增</string>
     </property>
    </widget>
    <widget class="QLabel" name="label">
@@ -461,6 +461,34 @@ QPushButton#add:hover {
       <x>370</x>
       <y>140</y>
       <width>110</width>
+      <height>25</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>200</y>
+      <width>61</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Verdana</family>
+     </font>
+    </property>
+    <property name="text">
+     <string>level_skip</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="level_skip_edit">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>200</y>
+      <width>41</width>
       <height>25</height>
      </rect>
     </property>

@@ -1,0 +1,1169 @@
+{
+    "d0:14:11:b0:0f:75": {
+        "type": "SCULite",
+        "channels": {
+            "1": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "2": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "3": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "4": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "5": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "6": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "7": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "8": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "9": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "10": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "11": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "12": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "13": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "14": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "15": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "16": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "17": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "18": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "19": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "20": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "21": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "22": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "23": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "24": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ]
+        }
+    },
+    "d0:14:11:b0:0f:72": {
+        "type": "SCULite",
+        "channels": {
+            "1": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "2": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "3": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "4": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "5": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "6": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "7": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "8": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "9": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "10": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "11": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "12": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "13": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "14": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "15": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "16": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "17": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "18": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "19": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "20": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "21": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "22": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "23": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "24": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ]
+        }
+    },
+    "d0:14:11:b0:10:7b": {
+        "type": "SCU",
+        "channels": {
+            "1": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "2": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "3": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "4": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "5": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "6": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "7": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "8": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "9": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "10": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "11": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "12": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "13": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "14": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "15": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "16": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "17": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "18": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "19": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "20": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "21": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "22": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "23": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "24": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "25": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "26": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "27": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "28": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "29": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "30": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "31": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "32": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "33": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "34": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "35": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "36": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "37": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "38": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "39": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "40": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "41": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "42": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "43": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "44": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "45": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "46": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "47": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "48": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "49": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "50": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "51": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "52": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "53": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "54": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "55": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "56": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "57": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "58": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "59": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "60": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "61": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "62": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "63": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "64": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "65": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "66": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "67": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "68": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "69": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "70": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "71": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "72": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "73": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "74": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "75": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "76": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "77": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "78": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "79": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "80": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "81": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "82": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "83": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "84": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "85": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "86": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "87": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "88": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "89": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "90": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "91": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "92": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "93": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "94": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "95": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ],
+            "96": [
+                "identify-self",
+                "reset-all-attributes",
+                "reset-device",
+                "switch-toggle",
+                "switch-on",
+                "switch-off"
+            ]
+        }
+    }
+}

@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_PairWindow(object):
     def setupUi(self, PairWindow):
         PairWindow.setObjectName("PairWindow")
-        PairWindow.resize(640, 609)
+        PairWindow.resize(640, 669)
         PairWindow.setStyleSheet("#PairWindow {\n"
 "    background-color: #F9F7F7;\n"
 "}\n"
@@ -28,7 +28,7 @@ class Ui_PairWindow(object):
 "    border-radius: 5px;\n"
 "}")
         self.confirm = QtWidgets.QPushButton(PairWindow)
-        self.confirm.setGeometry(QtCore.QRect(260, 530, 120, 50))
+        self.confirm.setGeometry(QtCore.QRect(220, 560, 200, 50))
         font = QtGui.QFont()
         font.setFamily("Microsoft YaHei")
         font.setPointSize(16)
@@ -53,11 +53,11 @@ class Ui_PairWindow(object):
 "")
         self.confirm.setObjectName("confirm")
         self.target_group = QtWidgets.QGroupBox(PairWindow)
-        self.target_group.setGeometry(QtCore.QRect(400, 10, 171, 91))
+        self.target_group.setGeometry(QtCore.QRect(400, 10, 170, 80))
         self.target_group.setTitle("")
         self.target_group.setObjectName("target_group")
         self.target_channel = QtWidgets.QLabel(self.target_group)
-        self.target_channel.setGeometry(QtCore.QRect(70, 40, 40, 40))
+        self.target_channel.setGeometry(QtCore.QRect(59, 30, 50, 40))
         font = QtGui.QFont()
         font.setFamily("Consolas")
         font.setPointSize(25)
@@ -68,7 +68,7 @@ class Ui_PairWindow(object):
         self.target_channel.setAlignment(QtCore.Qt.AlignCenter)
         self.target_channel.setObjectName("target_channel")
         self.target_title = QtWidgets.QLabel(self.target_group)
-        self.target_title.setGeometry(QtCore.QRect(0, 0, 171, 30))
+        self.target_title.setGeometry(QtCore.QRect(0, 0, 170, 30))
         font = QtGui.QFont()
         font.setFamily("Nirmala UI")
         font.setPointSize(12)
@@ -78,12 +78,12 @@ class Ui_PairWindow(object):
         self.target_title.setAlignment(QtCore.Qt.AlignCenter)
         self.target_title.setObjectName("target_title")
         self.source_group = QtWidgets.QGroupBox(PairWindow)
-        self.source_group.setGeometry(QtCore.QRect(69, 10, 171, 90))
+        self.source_group.setGeometry(QtCore.QRect(69, 10, 170, 80))
         self.source_group.setStyleSheet("")
         self.source_group.setTitle("")
         self.source_group.setObjectName("source_group")
         self.source_channel = QtWidgets.QLabel(self.source_group)
-        self.source_channel.setGeometry(QtCore.QRect(70, 40, 40, 40))
+        self.source_channel.setGeometry(QtCore.QRect(60, 30, 50, 40))
         font = QtGui.QFont()
         font.setFamily("Consolas")
         font.setPointSize(25)
@@ -94,7 +94,7 @@ class Ui_PairWindow(object):
         self.source_channel.setAlignment(QtCore.Qt.AlignCenter)
         self.source_channel.setObjectName("source_channel")
         self.source_title = QtWidgets.QLabel(self.source_group)
-        self.source_title.setGeometry(QtCore.QRect(0, 0, 171, 30))
+        self.source_title.setGeometry(QtCore.QRect(0, 0, 170, 30))
         font = QtGui.QFont()
         font.setFamily("Nirmala UI")
         font.setPointSize(12)
@@ -104,7 +104,7 @@ class Ui_PairWindow(object):
         self.source_title.setAlignment(QtCore.Qt.AlignCenter)
         self.source_title.setObjectName("source_title")
         self.cmd_group = QtWidgets.QGroupBox(PairWindow)
-        self.cmd_group.setGeometry(QtCore.QRect(20, 110, 600, 150))
+        self.cmd_group.setGeometry(QtCore.QRect(20, 90, 600, 171))
         font = QtGui.QFont()
         font.setFamily("Nirmala UI")
         font.setPointSize(12)
@@ -127,7 +127,7 @@ class Ui_PairWindow(object):
 "}")
         self.cmd_group.setObjectName("cmd_group")
         self.input_group = QtWidgets.QGroupBox(PairWindow)
-        self.input_group.setGeometry(QtCore.QRect(69, 270, 501, 241))
+        self.input_group.setGeometry(QtCore.QRect(70, 280, 500, 240))
         self.input_group.setStyleSheet("#input_group {\n"
 "    border: 1px solid #3F72AF;\n"
 "    border-radius: 10px;\n"
@@ -135,7 +135,7 @@ class Ui_PairWindow(object):
         self.input_group.setTitle("")
         self.input_group.setObjectName("input_group")
         self.add = QtWidgets.QPushButton(self.input_group)
-        self.add.setGeometry(QtCore.QRect(110, 190, 281, 41))
+        self.add.setGeometry(QtCore.QRect(350, 190, 130, 40))
         font = QtGui.QFont()
         font.setFamily("Microsoft YaHei")
         font.setPointSize(16)
@@ -219,6 +219,15 @@ class Ui_PairWindow(object):
         self.delay_edit = QtWidgets.QLineEdit(self.input_group)
         self.delay_edit.setGeometry(QtCore.QRect(370, 140, 110, 25))
         self.delay_edit.setObjectName("delay_edit")
+        self.label_2 = QtWidgets.QLabel(self.input_group)
+        self.label_2.setGeometry(QtCore.QRect(210, 200, 61, 25))
+        font = QtGui.QFont()
+        font.setFamily("Verdana")
+        self.label_2.setFont(font)
+        self.label_2.setObjectName("label_2")
+        self.level_skip_edit = QtWidgets.QLineEdit(self.input_group)
+        self.level_skip_edit.setGeometry(QtCore.QRect(280, 200, 41, 25))
+        self.level_skip_edit.setObjectName("level_skip_edit")
 
         self.retranslateUi(PairWindow)
         QtCore.QMetaObject.connectSlotsByName(PairWindow)
@@ -232,13 +241,14 @@ class Ui_PairWindow(object):
         self.source_channel.setText(_translate("PairWindow", "2"))
         self.source_title.setText(_translate("PairWindow", "Source Endpoint"))
         self.cmd_group.setTitle(_translate("PairWindow", "已加入的配對"))
-        self.add.setText(_translate("PairWindow", "新增至列表"))
+        self.add.setText(_translate("PairWindow", "新增"))
         self.label.setText(_translate("PairWindow", "Source Command"))
         self.label_4.setText(_translate("PairWindow", "Target Command"))
         self.level_check.setText(_translate("PairWindow", "Level"))
         self.duration_check.setText(_translate("PairWindow", "Duration"))
         self.timeout_check.setText(_translate("PairWindow", "Timeout(ms)"))
         self.delay_check.setText(_translate("PairWindow", "Delay(ms)"))
+        self.label_2.setText(_translate("PairWindow", "level_skip"))
 
 
 if __name__ == "__main__":

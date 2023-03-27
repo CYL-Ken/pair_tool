@@ -47,7 +47,7 @@ class Ui_MainWindow(object):
 "    selection-background-color: #3F72AF;\n"
 "}\n"
 "\n"
-"QGroupBox#device_button_group {\n"
+"QGroupBox#source_button_group {\n"
 "    border: 2px solid #DBE2EF;\n"
 "    border-radius: 5px;\n"
 "}\n"
@@ -111,11 +111,11 @@ class Ui_MainWindow(object):
         font.setPointSize(15)
         self.comboBox.setFont(font)
         self.comboBox.setObjectName("comboBox")
-        self.device_button_group = QtWidgets.QGroupBox(self.device_group)
-        self.device_button_group.setGeometry(QtCore.QRect(20, 70, 1160, 210))
-        self.device_button_group.setStyleSheet("")
-        self.device_button_group.setTitle("")
-        self.device_button_group.setObjectName("device_button_group")
+        self.source_button_group = QtWidgets.QGroupBox(self.device_group)
+        self.source_button_group.setGeometry(QtCore.QRect(20, 70, 1160, 210))
+        self.source_button_group.setStyleSheet("")
+        self.source_button_group.setTitle("")
+        self.source_button_group.setObjectName("source_button_group")
         self.device_title_2 = QtWidgets.QLabel(self.device_group)
         self.device_title_2.setGeometry(QtCore.QRect(20, 20, 121, 30))
         font = QtGui.QFont()
